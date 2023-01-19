@@ -31,7 +31,6 @@ package-lock.json
 config
 
 public/products
-src/market
 src/game
 src/app
 
