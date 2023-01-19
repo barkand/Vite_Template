@@ -31,7 +31,6 @@ package-lock.json
 config
 
 public/products
-src/game
 src/app
 
 manifest.ts
