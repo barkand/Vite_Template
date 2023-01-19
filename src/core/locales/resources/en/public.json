@@ -1,0 +1,15 @@
+{
+  "home": "Home",
+  "profile": "Profile",
+  "edit": "Edit",
+  "save": "Save",
+  "login": "Login",
+  "logout": "Logout",
+  "avatar": "Avatar",
+  "username": "UserName",
+  "selectPhoto": "Select Photo",
+  "username-already-exist": "This Username Already Exist",
+  "team-name-already-exist": "This Team Name Already Exist",
+  "site-name": "Footballiga",
+  "site-description": "Make Your Dream Team !"
+}

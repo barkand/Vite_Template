@@ -1,0 +1,15 @@
+{
+  "home": "صفحه اصلی",
+  "profile": "پروفایل",
+  "edit": "ویرایش",
+  "save": "ذخیره",
+  "login": "ورود",
+  "logout": "خروج",
+  "avatar": "تصویر",
+  "username": "نام کاربری",
+  "selectPhoto": "انتخاب تصویر",
+  "username-already-exist": "این نام کاربری توسط شخص دیگری انتخاب شده است",
+  "team-name-already-exist": "این نام تیم توسط شخص دیگری انتخاب شده است",
+  "site-name": "فوتبالیگا",
+  "site-description": "تیم رویاییت را بساز !"
+}

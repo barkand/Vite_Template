@@ -1,0 +1,22 @@
+{
+  "LoginWalletSuccess": "Login Wallet Success.",
+  "LoginFailed": "Error in Login Wallet",
+  "LogoutWalletSuccess": "Logout Wallet Success.",
+  "LogoutFailed": "Error Logout Wallet",
+  "InstallMetaMask": "Please install MetaMask to continue.",
+  "PermissionsNeeded": "Permissions needed to continue.",
+  "NeedConfirmToConnect": "You Need Confirm Connect.",
+  "NeedLogin": "First you need to login",
+  "ImageSizeError": "Image size have to Less Than 45mb",
+  "ErrorUploadImage": "Error Upload Image",
+  "UnexpectedErrorUploadAvatar": "Unexpected Error in Upload Avatar",
+  "UploadedSuccess": "Avatar Uploaded Success",
+  "GoerliNetwork": "Error in Login Wallet, Set Network on Goerli",
+  "settings": "Settings",
+  "color": "Color",
+  "language": "Language",
+  "notify": "Notify me if it's for sale",
+  "un-notify": "I don't care",
+  "notify-active-title": "The following card can be purchased",
+  "notify-permission-denied": "Permission confirmation is required for notification"
+}
