@@ -22,7 +22,7 @@ import UsernameEditor from "./username";
 
 export default function Form() {
   const { publicCtx }: { publicCtx: any } = React.useContext(PublicContext);
-  const { t } = useTranslation(["public"]);
+  const { t } = useTranslation(["admin"]);
   const [open, setOpen] = React.useState(false);
 
   const [uploadAvatar, setUploadAvatar] = React.useState(EditTypeEnum.None);

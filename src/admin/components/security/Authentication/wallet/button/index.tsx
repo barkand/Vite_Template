@@ -9,7 +9,7 @@ import useUser from "../hook/use-user";
 import { Login, Logout } from "./loginLogout";
 
 export default function Wallet() {
-  const { t } = useTranslation(["public", "admin"]);
+  const { t } = useTranslation(["admin"]);
   const { publicCtx, setPublicCtx }: any = React.useContext(PublicContext);
   const [loaded, setLoaded] = React.useState<boolean>(false);
   const { _, loading, loggedOut, mutate }: any = useUser();
@@ -37,7 +37,7 @@ export default function Wallet() {
         wallet: _result.wallet,
         alert: {
           ..._result.alert,
-          message: t(_result.alert.message, { ns: "admin" }),
+          message: t(_result.alert.message),
         },
       });
     };
@@ -64,7 +64,7 @@ export default function Wallet() {
             wallet: _result.wallet,
             alert: {
               ..._result.alert,
-              message: t(_result.alert.message, { ns: "admin" }),
+              message: t(_result.alert.message),
             },
           });
         };

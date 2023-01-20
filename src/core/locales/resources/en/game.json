@@ -9,5 +9,6 @@
   "team": "Your Team",
   "games": "Your Games",
   "team-logo": "Select Your Team Logo",
-  "team-name": "Input Your Team Name"
+  "team-name": "Input Your Team Name",
+  "team-name-already-exist": "This Team Name Already Exist"
 }

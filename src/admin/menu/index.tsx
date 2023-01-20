@@ -8,7 +8,7 @@ import { ProfileIcon } from "../../core/icon";
 
 export default function MenuList(props: any) {
   const { publicCtx }: { publicCtx: any } = React.useContext(PublicContext);
-  const { t } = useTranslation(["public"]);
+  const { t } = useTranslation(["admin"]);
 
   return (
     <>
