@@ -8,7 +8,10 @@ export default function App() {
     <HelmetProvider>
       <Helmet>
         <title>{import.meta.env.VITE_COMPANY_NAME}</title>
-        <meta name="description" content={import.meta.env.VITE_COMPANY_NAME} />
+        <meta
+          name="description"
+          content={import.meta.env.VITE_COMPANY_DESCRIPTION}
+        />
       </Helmet>
       <Router>
         <Layout />
