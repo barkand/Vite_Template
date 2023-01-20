@@ -17,6 +17,5 @@
   "language": "Language",
   "notify": "Notify me if it's for sale",
   "un-notify": "I don't care",
-  "notify-active-title": "The following card can be purchased",
   "notify-permission-denied": "Permission confirmation is required for notification"
 }

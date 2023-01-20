@@ -20,5 +20,6 @@
   "nft-history": "NFT History",
   "your-price": "Your Price For Sale",
   "active-sale": "Active For Sale",
-  "buy-money": "There isn't enough money to complete the transaction"
+  "buy-money": "There isn't enough money to complete the transaction",
+  "notify-active-title": "Activated for sale"
 }
