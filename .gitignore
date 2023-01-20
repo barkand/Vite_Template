@@ -27,13 +27,13 @@ dist-ssr
 
 coverage
 package-lock.json
-
-# Add this files:
 public/products
 
+# Add this files:
 config/.env
 config/.env.production
 config/.env.testing
+/.env
 
 public/favicon.ico
 public/assets/media/logo/logo.png
@@ -41,5 +41,4 @@ public/assets/media/pwa/favicon.png
 public/assets/media/pwa/logo-192.png
 public/assets/media/pwa/logo-512.png
 
-manifest.ts
 index.html
