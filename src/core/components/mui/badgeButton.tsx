@@ -42,15 +42,16 @@ export default function BadgeButton(props: any) {
             horizontal: "right",
           }}
           open={Boolean(anchorEl)}
-          onClose={() => handleClose}
+          onClose={() => handleClose()}
         >
           {items.map((item: any) => (
-            <Link key={item.id} to={`${link}${item.id}`}>
+            <Link key={item.refer_id} to={`${link}/${item.refer_id}`}>
               <MenuItem
-                onClick={() => handleClose(item.id)}
+                key={item.refer_id}
                 sx={{ fontSize: "13px" }}
+                onClick={() => handleClose(item.refer_id)}
               >
-                {item.title}
+                {item.message}
               </MenuItem>
             </Link>
           ))}
