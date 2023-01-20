@@ -12,6 +12,7 @@ interface ImportMetaEnv {
   readonly VITE_Background_dark_secondary: string;
   readonly VITE_Background_dark_tertiary: string;
   readonly VITE_COMPANY_NAME: string;
+  readonly VITE_COMPANY_DESCRIPTION: string;
   readonly VITE_CLIENT_PATH: string;
   readonly VITE_SERVER_PATH: string;
   readonly VITE_UPLOAD_PATH: string;
