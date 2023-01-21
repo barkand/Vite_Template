@@ -22,6 +22,7 @@ export default function ModalMUI(props: any) {
         onClose={handleClose}
         aria-labelledby="modal-title"
         aria-describedby="modal-description"
+        sx={{ textAlign: "center" }}
       >
         <Box sx={style}>{children}</Box>
       </Modal>
