@@ -39,7 +39,6 @@ export { default as Tilt } from "./effect/tilt";
 export { default as TiltEffect } from "./effect";
 
 export { Provider as TourProvider } from "./tour";
-export { default as WelcomeForm } from "./tour/modal";
 
 export { default as Box } from "./toys/box";
 export { default as Gap } from "./toys/gap";
