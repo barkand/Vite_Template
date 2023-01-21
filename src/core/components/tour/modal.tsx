@@ -4,8 +4,11 @@ import { useTranslation } from "react-i18next";
 
 import { Modal, Button, Label, Divider } from "../../components";
 
+import { PublicContext } from "../../context";
+
 export default function WelcomeForm() {
   const { t } = useTranslation(["admin", "public"]);
+  const { publicCtx } = React.useContext(PublicContext);
   const [open, setOpen] = React.useState(true);
   const { setIsOpen } = useTour();
 
@@ -23,7 +26,10 @@ export default function WelcomeForm() {
       {import.meta.env.VITE_WELCOME_FORM === "true" &&
         localStorage.getItem("tour") !== "false" && (
           <Modal open={open} handleClose={closeForm}>
-            <>
+            <div
+              className={publicCtx.culture.name}
+              style={{ direction: publicCtx.culture.direction }}
+            >
               <Label size="h6">
                 {t("welcome-tour")} {t("site-name", { ns: "public" })}
               </Label>
@@ -40,7 +46,7 @@ export default function WelcomeForm() {
                 title={t("close")}
                 sx={{ ml: 2, mr: 2 }}
               />
-            </>
+            </div>
           </Modal>
         )}
     </>

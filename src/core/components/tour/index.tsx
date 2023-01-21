@@ -15,7 +15,14 @@ function Provider(props: any) {
     <TourProvider
       steps={publicCtx.culture.name === "en" ? stepsEn : stepsFa}
       showNavigation={false}
-      styles={{ popover: (base) => ({ ...base, color: "black" }) }}
+      className={publicCtx.culture.name}
+      styles={{
+        popover: (base) => ({
+          ...base,
+          color: "black",
+          direction: publicCtx.culture.direction,
+        }),
+      }}
       onClickMask={({ setCurrentStep, currentStep, steps, setIsOpen }) => {
         if (steps) {
           if (currentStep === steps.length - 1) setIsOpen(false);
