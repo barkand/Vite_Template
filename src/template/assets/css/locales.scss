@@ -6,28 +6,9 @@
 
 .fa {
   font-size: 0.8rem !important;
+  font-family: IranSans !important;
 
-  div,
-  span,
-  p,
-  a,
-  button,
-  label,
-  input,
-  textarea,
-  select,
-  option,
-  th,
-  td,
-  ul,
-  li,
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  fieldset {
+  * {
     font-family: IranSans !important;
   }
 
