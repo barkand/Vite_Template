@@ -27,5 +27,8 @@
   "language": "زبان",
   "notify": "فروشی بود خبرم کن",
   "un-notify": "واسم مهم نیست",
-  "notify-permission-denied": "برای اطلاع رسانی نیاز به تایید مجوز است"
+  "notify-permission-denied": "برای اطلاع رسانی نیاز به تایید مجوز است",
+  "welcome-tour": "خوش آمدید به",
+  "open-tour": "مشاهده تور",
+  "close": "بستن فرم"
 }
