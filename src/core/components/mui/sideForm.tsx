@@ -22,8 +22,9 @@ export default function SideForm(props: any) {
       <IconButton
         edge="start"
         aria-label="menu"
-        onClick={openDrawer}
+        onClick={props.isDrawerOpen ? closeDrawer : openDrawer}
         sx={{ mr: 2 }}
+        className="step-menu"
       >
         <MenuIcon />
       </IconButton>

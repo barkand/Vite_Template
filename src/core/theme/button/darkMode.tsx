@@ -42,6 +42,7 @@ export default function DarkMode() {
             : Enums.ThemeTypeEnum.Dark
         )
       }
+      className="step-dark-mode"
     >
       {publicCtx.theme.background.isDark ? <SunIcon /> : <MoonIcon />}
     </IconButton>

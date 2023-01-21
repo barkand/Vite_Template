@@ -20,7 +20,7 @@ export default function SettingButton() {
 
   return (
     <>
-      <IconButton onClick={handleOpen}>
+      <IconButton onClick={handleOpen} className="step-setting">
         <SettingsIcon />
       </IconButton>
 

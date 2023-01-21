@@ -20,6 +20,7 @@ export default function MiniProfileGadget({ onClose }: { onClose: any }) {
               paddingRight: "20px",
             }}
             onClick={onClose}
+            className="step-min-profile"
           >
             <div
               style={{

@@ -75,7 +75,7 @@ export default function Wallet() {
 
   return (
     <>
-      <IconButton onClick={walletClick}>
+      <IconButton onClick={walletClick} className="step-wallet">
         {!loggedOut === true ? (
           <Tip title={t("logout")}>
             <LockOpenIcon />
