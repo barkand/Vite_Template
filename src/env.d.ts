@@ -20,6 +20,7 @@ interface ImportMetaEnv {
   readonly VITE_REFRESH_SECRET_KEY: number;
   readonly VITE_GAS_LIMIT: string;
   readonly VITE_INFURA_ID: string;
+  readonly VITE_WELCOME_FORM: string;
 }
 
 interface ImportMeta {
