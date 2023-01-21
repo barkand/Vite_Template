@@ -18,10 +18,6 @@ export default function WelcomeForm() {
     setIsOpen(true);
   };
 
-  React.useEffect(() => {
-    console.log("end");
-  }, [setIsOpen]);
-
   return (
     <>
       {import.meta.env.VITE_WELCOME_FORM === "true" &&
