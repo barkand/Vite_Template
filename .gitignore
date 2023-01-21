@@ -43,3 +43,5 @@ public/assets/media/pwa/logo-512.png
 
 src/core/locales/resources/en/public.json
 src/core/locales/resources/fa/public.json
+
+src/core/components/tour/steps/*
