@@ -8,3 +8,5 @@ export { default as SettingButton } from "./setting/button";
 
 export { default as NotificationButton } from "./notification/button";
 export { default as NotificationBadge } from "./notification/badge";
+
+export { default as AdminMenu } from "./menu";
