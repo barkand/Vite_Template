@@ -19,6 +19,7 @@ export default function WelcomeForm() {
   const startTour = () => {
     setOpen(false);
     setIsOpen(true);
+    localStorage.setItem("tour", "false");
   };
 
   return (
