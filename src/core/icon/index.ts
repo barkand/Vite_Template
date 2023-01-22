@@ -36,4 +36,5 @@ export {
   NotificationsNoneIcon,
   NotificationsIcon,
   NotificationsActiveIcon,
+  HelpIcon,
 } from "./mui/icons";

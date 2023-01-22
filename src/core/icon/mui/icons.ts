@@ -36,6 +36,7 @@ import {
   NotificationsNone as NotificationsNoneIcon,
   Notifications as NotificationsIcon,
   NotificationsActive as NotificationsActiveIcon,
+  HelpCenter as HelpIcon,
 } from "@mui/icons-material";
 
 export {
@@ -76,4 +77,5 @@ export {
   NotificationsNoneIcon,
   NotificationsIcon,
   NotificationsActiveIcon,
+  HelpIcon,
 };
