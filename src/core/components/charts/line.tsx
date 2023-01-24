@@ -11,7 +11,7 @@ import {
 import { PublicContext } from "../../context";
 import { Colors } from "../../theme";
 
-export default function ChartLine({ data }: { data: any }) {
+export default function LineReChart({ data }: { data: any }) {
   const { publicCtx } = React.useContext(PublicContext);
 
   return (
