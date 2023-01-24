@@ -1,5 +1,3 @@
-import React from "react";
-
 import {
   LineChart,
   Line,
@@ -8,12 +6,7 @@ import {
   ResponsiveContainer,
 } from "recharts";
 
-import { PublicContext } from "../../context";
-import { Colors } from "../../theme";
-
-export default function LineReChart({ data }: { data: any }) {
-  const { publicCtx } = React.useContext(PublicContext);
-
+export default function LineReChart({ data, color }: any) {
   return (
     <div
       style={{
@@ -25,15 +18,12 @@ export default function LineReChart({ data }: { data: any }) {
     >
       <ResponsiveContainer>
         <LineChart data={data}>
-          <YAxis stroke="#999" />
+          <YAxis stroke="darkgray" />
           <Line
             type="monotone"
             dataKey="value"
             strokeWidth="4"
-            stroke={
-              Colors[publicCtx.theme.color][publicCtx.theme.background.name]
-                .primary
-            }
+            stroke={color}
           />
           <CartesianGrid stroke="#666" strokeDasharray="5 5" />
         </LineChart>
