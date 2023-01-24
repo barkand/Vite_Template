@@ -1,6 +1,6 @@
 import { BarChart, Bar, ResponsiveContainer, XAxis, YAxis } from "recharts";
 
-export default function BarReChart({ data }: any) {
+export default function BarReChart({ data, fill }: any) {
   return (
     <div
       style={{
@@ -14,8 +14,8 @@ export default function BarReChart({ data }: any) {
         <BarChart width={150} height={40} data={data}>
           <XAxis dataKey="name" />
           <Bar
-            dataKey="val"
-            fill="#413ea0"
+            dataKey="value"
+            fill={fill}
             label={{ position: "insideStart", fill: "#000" }}
           />
         </BarChart>
