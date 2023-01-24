@@ -17,8 +17,8 @@ export default function LineReChart({ data }: { data: any }) {
   return (
     <div
       style={{
-        width: "100%",
-        height: 250,
+        width: "auto",
+        height: "100%",
         direction: "ltr",
         marginBottom: "10px",
       }}
