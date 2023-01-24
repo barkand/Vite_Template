@@ -1,4 +1,4 @@
-import { BarChart, Bar, ResponsiveContainer, XAxis, YAxis } from "recharts";
+import { BarChart, Bar, ResponsiveContainer, XAxis } from "recharts";
 
 export default function BarReChart({ data, fill }: any) {
   return (
