@@ -48,4 +48,4 @@ export { default as ShareButton } from "./toys/share";
 export { default as CompanyLogo } from "./trademark/logo";
 export { default as CompanyName } from "./trademark/title";
 
-export { LineChart, PieChart, RadialBarChart, BarChart } from "./charts";
+export { LineChart, PieChart, StackedBarChart, BarChart } from "./charts";
