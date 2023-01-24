@@ -1,0 +1,25 @@
+import { BarChart, Bar, ResponsiveContainer, XAxis, YAxis } from "recharts";
+
+export default function BarReChart({ data }: any) {
+  return (
+    <div
+      style={{
+        width: "auto",
+        height: "100%",
+        direction: "ltr",
+        margin: "10px",
+      }}
+    >
+      <ResponsiveContainer>
+        <BarChart width={150} height={40} data={data}>
+          <XAxis dataKey="name" />
+          <Bar
+            dataKey="val"
+            fill="#413ea0"
+            label={{ position: "insideStart", fill: "#000" }}
+          />
+        </BarChart>
+      </ResponsiveContainer>
+    </div>
+  );
+}
