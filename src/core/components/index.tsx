@@ -18,7 +18,6 @@ export { default as ButtonLoading } from "./mui/buttonLoading";
 export { default as ButtonCircularLoading } from "./mui/buttonCLoading";
 export { default as Tip } from "./mui/tip";
 export { default as ButtonList } from "./mui/buttonList";
-export { default as Card } from "./mui/card";
 export { default as SliderRange } from "./mui/slider";
 export { TabsHeader, TabLabel, TabPanel } from "./mui/tab";
 export { GridHeader, GridItem } from "./mui/grid";
@@ -48,3 +47,5 @@ export { default as ShareButton } from "./toys/share";
 
 export { default as CompanyLogo } from "./trademark/logo";
 export { default as CompanyName } from "./trademark/title";
+
+export { LineChart, PieChart, RadialBarChart, BarChart } from "./charts";

@@ -50,7 +50,7 @@ export default function PieReChart({ data }: { data: any }) {
             {data.map((entry: any, index: any) => (
               <Cell
                 key={`cell-${index}`}
-                fill={data[index % data.length].color}
+                fill={data[index % data.length].fill}
               />
             ))}
           </Pie>
