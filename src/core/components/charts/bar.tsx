@@ -12,7 +12,7 @@ export default function BarReChart({ data, fill }: any) {
     >
       <ResponsiveContainer>
         <BarChart width={150} height={40} data={data}>
-          <XAxis dataKey="name" />
+          <XAxis dataKey="name" stroke="darkgray" />
           <Bar
             dataKey="value"
             fill={fill}
