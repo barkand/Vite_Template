@@ -24,10 +24,7 @@ export default function LineReChart({ data }: { data: any }) {
       }}
     >
       <ResponsiveContainer>
-        <LineChart
-          data={data}
-          margin={{ right: 5, bottom: 5, left: 5, top: 5 }}
-        >
+        <LineChart data={data}>
           <YAxis stroke="#999" />
           <Line
             type="monotone"
@@ -38,7 +35,7 @@ export default function LineReChart({ data }: { data: any }) {
                 .primary
             }
           />
-          <CartesianGrid stroke="#333" strokeDasharray="5 5" />
+          <CartesianGrid stroke="#666" strokeDasharray="5 5" />
         </LineChart>
       </ResponsiveContainer>
     </div>
