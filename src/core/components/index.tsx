@@ -44,6 +44,7 @@ export { default as HomeMenu } from "./menu/home";
 export { default as Box } from "./toys/box";
 export { default as Gap } from "./toys/gap";
 export { default as ShareButton } from "./toys/share";
+export { default as Card } from "./toys/card";
 
 export { default as CompanyLogo } from "./trademark/logo";
 export { default as CompanyName } from "./trademark/title";
