@@ -31,7 +31,7 @@ export default function LineReChart({ data }: { data: any }) {
           <YAxis stroke="#999" />
           <Line
             type="monotone"
-            dataKey="price"
+            dataKey="value"
             strokeWidth="4"
             stroke={
               Colors[publicCtx.theme.color][publicCtx.theme.background.name]
