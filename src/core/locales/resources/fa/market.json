@@ -22,5 +22,8 @@
   "your-price": "قیمت شما برای فروش",
   "active-sale": "فعالسازی برای فروش",
   "buy-money": "پول کافی برای انجام تراکنش ندارید",
-  "notify-active-title": "ّبرای فروش فعال شد"
+  "notify-active-title": "ّبرای فروش فعال شد",
+  "cnt-sale-cards": "تعداد کارتهای فروخته شده",
+  "cnt-post-players": "تعداد بازیکنان به تفکیک پست",
+  "avg-age-players": "میانگین سن بازیکنان"
 }

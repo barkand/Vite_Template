@@ -22,5 +22,8 @@
   "your-price": "Your Price For Sale",
   "active-sale": "Active For Sale",
   "buy-money": "There isn't enough money to complete the transaction",
-  "notify-active-title": "Activated for sale"
+  "notify-active-title": "Activated for sale",
+  "cnt-sale-cards": "Number of sold cards",
+  "cnt-post-players": "Number of players by position",
+  "avg-age-players": "Average age of players"
 }
