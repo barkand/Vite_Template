@@ -25,5 +25,6 @@
   "notify-active-title": "Activated for sale",
   "cnt-sale-cards": "Number of sold cards",
   "cnt-post-players": "Number of players by position",
-  "avg-age-players": "Average age of players"
+  "avg-age-players": "Average age of players",
+  "change-prices": "Price fluctuations"
 }
