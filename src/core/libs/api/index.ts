@@ -11,7 +11,7 @@ const PostAuth = async (params: any, route: string) => {
       return { code: 500 };
     });
 
-  return { code: 200, status: _result.message, items: _result.data };
+  return { code: 200, message: _result.message, items: _result.data };
 };
 
 const Post = async (params: any, route: string) => {
@@ -26,7 +26,7 @@ const Post = async (params: any, route: string) => {
       return { code: 500 };
     });
 
-  return { code: 200, status: _result.message, items: _result.data };
+  return { code: 200, message: _result.message, items: _result.data };
 };
 
 const Upload = async (params: any, route: string) => {
@@ -41,7 +41,7 @@ const Upload = async (params: any, route: string) => {
       return { code: 500 };
     });
 
-  return { code: 200, status: _result.message };
+  return { code: 200, message: _result.message };
 };
 
 export { PostAuth, Post, Upload };
