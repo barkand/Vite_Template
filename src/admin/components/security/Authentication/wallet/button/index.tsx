@@ -33,8 +33,8 @@ export default function Wallet() {
 
       setPublicCtx({
         ...publicCtx,
-        user: _result.items.user,
-        wallet: _result.items.wallet,
+        user: _result.user,
+        wallet: _result.wallet,
         alert: {
           ..._result.alert,
           message: t(_result.alert.message),
@@ -60,8 +60,8 @@ export default function Wallet() {
           let _result = await Logout();
           setPublicCtx({
             ...publicCtx,
-            user: _result.items.user,
-            wallet: _result.items.wallet,
+            user: _result.user,
+            wallet: _result.wallet,
             alert: {
               ..._result.alert,
               message: t(_result.alert.message),
