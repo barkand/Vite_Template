@@ -1,8 +1,7 @@
 import React from "react";
 
-import { GetUser as ApiGetUser } from "./api";
-
 import { PublicContext } from "../../../../core/context";
+import { PostAuthApi } from "../../../../core/libs";
 
 export default function Authentication({ children }: { children: any }) {
   const { publicCtx, setPublicCtx }: any = React.useContext(PublicContext);
@@ -16,11 +15,25 @@ export default function Authentication({ children }: { children: any }) {
 
     if (publicCtx.wallet.connected && publicCtx.user.name === "") {
       const fillDefault = async () => {
-        let _user = await ApiGetUser();
-        setPublicCtx({
-          ...publicCtx,
-          user: _user,
-        });
+        let _result = await PostAuthApi({}, "admin/user");
+
+        let _avatar = "";
+        if (_result && _result.items.avatar) {
+          _avatar = `${import.meta.env.VITE_UPLOAD_PATH}/${
+            import.meta.env.VITE_UPLOAD_FOLDER
+          }/users/${_result.items.wallet}.webp`;
+
+          let _user = {
+            name: _result.items.username,
+            avatar: _avatar,
+            score: _result.items.score ?? 0,
+          };
+
+          setPublicCtx({
+            ...publicCtx,
+            user: _user,
+          });
+        }
       };
       fillDefault();
     }

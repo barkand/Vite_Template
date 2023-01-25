@@ -1,6 +1,6 @@
 import { StatusTypeEnum } from "../../../../../../../core/constant";
-
 import { default as DefaultWallet } from "../../../../../../../core/context/default/wallet";
+
 import ConnectWallet from "./wallet";
 
 const MobileWallet = async () => {

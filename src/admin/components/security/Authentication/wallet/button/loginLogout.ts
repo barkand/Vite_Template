@@ -1,12 +1,10 @@
-import { LogoutWallet } from "../api";
+import { DefaultWallet, DefaultUser } from "../../../../../../core/context";
+import { StatusTypeEnum } from "../../../../../../core/constant";
+import { PostAuthApi } from "../../../../../../core/libs";
+
 import MobileWallet from "../libs/connect/mobile";
 import WebWallet from "../libs/connect/web";
 import { Disconnect } from "../libs/web3";
-import { GetUser as ApiGetUser } from "../../api";
-import {
-  DefaultWallet,
-  DefaultUser,
-} from "../../../../../../core/context/default";
 
 async function Login() {
   let _result =
@@ -15,7 +13,10 @@ async function Login() {
       : await WebWallet();
 
   let _user = DefaultUser;
-  if (_result.wallet.connected) _user = await ApiGetUser();
+  if (_result.wallet.connected) {
+    let _result = await PostAuthApi({}, "admin/user");
+    _user = _result?.items;
+  }
 
   return { ..._result, user: _user };
 }
@@ -25,8 +26,20 @@ async function Logout() {
   localStorage.removeItem("netId");
   await Disconnect();
 
-  let _result = await LogoutWallet();
-  return { ..._result, user: DefaultUser, wallet: DefaultWallet };
+  let _result = await PostAuthApi({}, "admin/logout");
+  let _alert: any = {
+    open: true,
+    message: _result.code === 200 ? "LogoutWalletSuccess" : "LogoutFailed",
+    severity:
+      _result.code === 200 ? StatusTypeEnum.Warning : StatusTypeEnum.Error,
+  };
+
+  return {
+    ..._result,
+    user: DefaultUser,
+    wallet: DefaultWallet,
+    alert: _alert,
+  };
 }
 
 export { Login, Logout };

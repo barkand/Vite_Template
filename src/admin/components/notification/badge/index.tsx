@@ -1,11 +1,10 @@
 import React from "react";
 
 import { PublicContext } from "../../../../core/context";
-import { BadgeButton } from "../../../../core/components";
-import { NotificationsIcon } from "../../../../core/icon";
 import { RoutesTypeEnum } from "../../../../core/constant";
-
-import { GetNotification, SeenNotification } from "../api";
+import { BadgeButton } from "../../../../core/components";
+import { PostAuthApi } from "../../../../core/libs";
+import { NotificationsIcon } from "../../../../core/icon";
 
 export default function Notification(props: any) {
   const [loaded, setLoaded] = React.useState<boolean>(false);
@@ -20,7 +19,7 @@ export default function Notification(props: any) {
 
     if (publicCtx.wallet.connected) {
       const fetchData = async () => {
-        let _result: any = await GetNotification();
+        let _result: any = await PostAuthApi({}, "admin/get_notifications");
 
         if (_result.code === 200) {
           setNotifications(_result.items);
@@ -32,7 +31,7 @@ export default function Notification(props: any) {
   }, [loaded]);
 
   const seenItem = async (id: number) => {
-    await SeenNotification(id);
+    await PostAuthApi({ item_id: id }, "admin/seen_notify");
   };
 
   return (

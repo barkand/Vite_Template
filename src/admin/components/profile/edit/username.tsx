@@ -4,8 +4,7 @@ import _debounce from "lodash/debounce";
 import { EditTypeEnum } from "../../../../core/constant";
 import { PublicContext } from "../../../../core/context";
 import { Textbox } from "../../../../core/components";
-
-import { UpdateUsername as ApiUpdateUsername } from "../api";
+import { PostAuthApi } from "../../../../core/libs";
 
 export default function UsernameEditor(props: any) {
   const { setEditUsername } = props;
@@ -17,7 +16,10 @@ export default function UsernameEditor(props: any) {
     let _inputValue = inputValue.trim();
     if (_inputValue === "") return;
 
-    let _result: any = await ApiUpdateUsername(_inputValue);
+    let _result: any = await PostAuthApi(
+      { username: _inputValue },
+      "admin/update_user"
+    );
 
     switch (_result.code) {
       case 200:
@@ -27,8 +29,8 @@ export default function UsernameEditor(props: any) {
           ...publicCtx,
           user: {
             ...publicCtx.user,
-            name: _result.user.name,
-            score: _result.user.score,
+            name: _result.items.name,
+            score: _result.items.score,
           },
         });
 

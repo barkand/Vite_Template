@@ -1,7 +1,8 @@
-import { LoginWallet } from "../../api";
-import { GetLibrary as GetWeb3Library, Disconnect } from "../web3";
+import { DefaultWallet } from "../../../../../../../core/context";
+import { StatusTypeEnum } from "../../../../../../../core/constant";
+import { PostAuthApi } from "../../../../../../../core/libs";
 
-import { DefaultWallet } from "../../../../../../../core/context/default";
+import { GetLibrary as GetWeb3Library, Disconnect } from "../web3";
 
 const ConnectWallet = async () => {
   const library: any = await GetWeb3Library();
@@ -14,10 +15,24 @@ const ConnectWallet = async () => {
   if (_wallet.connected === true) {
     let netId = await eth.net.getId();
     if (netId === 5) {
-      let _data: any = await LoginWallet(_wallet.account);
-      if (_data.connected === true) {
-        localStorage.setItem("wallet", _wallet.account);
-        localStorage.setItem("netId", netId);
+      let _result: any = await PostAuthApi(
+        { wallet: _wallet.account },
+        "admin/login"
+      );
+      if (_result.code === 200) {
+        if (_result.items.connected === true) {
+          localStorage.setItem("wallet", _wallet.account);
+          localStorage.setItem("netId", netId);
+        }
+      } else {
+        return {
+          wallet: DefaultWallet,
+          alert: {
+            open: true,
+            message: "LoginFailed",
+            severity: StatusTypeEnum.Error,
+          },
+        };
       }
     } else {
       if (localStorage.getItem("walletconnect")) await Disconnect();

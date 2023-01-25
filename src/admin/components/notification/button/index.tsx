@@ -3,13 +3,12 @@ import { useTranslation } from "react-i18next";
 
 import { PublicContext } from "../../../../core/context";
 import { IconButton, Tip } from "../../../../core/components";
+import { StatusTypeEnum } from "../../../../core/constant";
+import { PostAuthApi } from "../../../../core/libs";
 import {
   NotificationsActiveIcon,
   NotificationsNoneIcon,
 } from "../../../../core/icon";
-import { StatusTypeEnum } from "../../../../core/constant";
-
-import { SaveNotification, DeleteNotification } from "../api";
 
 export default function NotificationButton(props: any) {
   const { id, message, link, notified }: any = props;
@@ -31,14 +30,22 @@ export default function NotificationButton(props: any) {
     }
 
     if (notify) {
-      let _result: any = await DeleteNotification(id);
+      let _result: any = await PostAuthApi(
+        { item_id: id },
+        "admin/delete_notify"
+      );
       if (_result.code === 200) setNotify(false);
     } else {
-      let _result: any = await SaveNotification({
-        item_id: id,
-        message: message,
-        refer_link: link,
-      });
+      let _result: any = await PostAuthApi(
+        {
+          notify: {
+            item_id: id,
+            message: message,
+            refer_link: link,
+          },
+        },
+        "admin/save_notify"
+      );
       if (_result.code === 200) setNotify(true);
     }
   };

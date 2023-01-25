@@ -1,10 +1,8 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 
-import { PublicContext } from "../../context";
+import { PublicContext, DefaultCulture } from "../../context";
 import { Combo } from "../../components";
-import cultures from "../../context/default/culture";
-import { DefaultCulture } from "../../context/default";
 
 export default function LanguageButton() {
   const { publicCtx, setPublicCtx }: any = React.useContext(PublicContext);
@@ -18,7 +16,7 @@ export default function LanguageButton() {
 
     setPublicCtx({
       ...publicCtx,
-      culture: cultures[lang],
+      culture: DefaultCulture[lang],
     });
 
     setLang(lang);

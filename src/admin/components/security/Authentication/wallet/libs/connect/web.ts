@@ -1,6 +1,6 @@
 import { StatusTypeEnum } from "../../../../../../../core/constant";
+import { DefaultWallet } from "../../../../../../../core/context";
 
-import { default as DefaultWallet } from "../../../../../../../core/context/default/wallet";
 import ConnectWallet from "./wallet";
 
 const WebWallet = async () => {
@@ -27,10 +27,10 @@ const WebWallet = async () => {
       );
 
       if (accountsPermission) {
-        let _res = await ConnectWallet();
+        let _result = await ConnectWallet();
         let _netID = localStorage.getItem("netId");
-        if (_res && _netID) {
-          return _res;
+        if (_result && _netID) {
+          return _result;
         } else {
           errorMsg = "GoerliNetwork";
         }
