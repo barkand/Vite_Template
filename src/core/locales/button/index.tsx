@@ -1,7 +1,8 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 
-import { PublicContext, DefaultCulture } from "../../context";
+import { PublicContext } from "../../context";
+import { DefaultCulture } from "../../context/default";
 import { Combo } from "../../components";
 
 export default function LanguageButton() {

@@ -1,5 +1,10 @@
 import { DeviceTypeEnum, StatusTypeEnum } from "../../constant";
-import { DefaultCulture, DefaultTheme, DefaultUser, DefaultWallet } from "..";
+import {
+  DefaultCulture,
+  DefaultTheme,
+  DefaultUser,
+  DefaultWallet,
+} from "../default";
 
 let _device =
   "ontouchstart" in window || "onmsgesturechange" in window

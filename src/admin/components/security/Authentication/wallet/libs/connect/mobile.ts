@@ -1,5 +1,5 @@
 import { StatusTypeEnum } from "../../../../../../../core/constant";
-import { default as DefaultWallet } from "../../../../../../../core/context/default/wallet";
+import { DefaultWallet } from "../../../../../../../core/context/default";
 
 import ConnectWallet from "./wallet";
 

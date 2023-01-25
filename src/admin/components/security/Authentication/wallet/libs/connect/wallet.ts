@@ -1,4 +1,4 @@
-import { DefaultWallet } from "../../../../../../../core/context";
+import { DefaultWallet } from "../../../../../../../core/context/default";
 import { StatusTypeEnum } from "../../../../../../../core/constant";
 import { PostAuthApi } from "../../../../../../../core/libs";
 
