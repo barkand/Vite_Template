@@ -6,7 +6,7 @@ import {
   ResponsiveContainer,
 } from "recharts";
 
-export default function LineReChart({ data, color }: any) {
+export default function LineReChart({ data, color, color2 }: any) {
   return (
     <div
       style={{
@@ -25,6 +25,14 @@ export default function LineReChart({ data, color }: any) {
             strokeWidth="4"
             stroke={color}
           />
+          {data && data[0]?.value2 && (
+            <Line
+              type="monotone"
+              dataKey="value2"
+              strokeWidth="4"
+              stroke={color2}
+            />
+          )}
           <CartesianGrid stroke="#666" strokeDasharray="5 5" />
         </LineChart>
       </ResponsiveContainer>
