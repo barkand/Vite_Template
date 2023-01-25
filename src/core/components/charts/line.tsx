@@ -6,7 +6,9 @@ import {
   ResponsiveContainer,
 } from "recharts";
 
-export default function LineReChart({ data, color, color2 }: any) {
+export default function LineReChart(props: any) {
+  const { data, color }: any = props;
+
   return (
     <div
       style={{
@@ -18,7 +20,7 @@ export default function LineReChart({ data, color, color2 }: any) {
     >
       <ResponsiveContainer>
         <LineChart data={data}>
-          <YAxis stroke="darkgray" />
+          {props.yAxis && <YAxis stroke="darkgray" />}
           <Line
             type="monotone"
             dataKey="value"
@@ -30,7 +32,7 @@ export default function LineReChart({ data, color, color2 }: any) {
               type="monotone"
               dataKey="value2"
               strokeWidth="4"
-              stroke={color2}
+              stroke={props.color2}
             />
           )}
           <CartesianGrid stroke="#666" strokeDasharray="5 5" />
