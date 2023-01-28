@@ -1,6 +1,6 @@
-import { DefaultUser } from "../../../../../../../../core/context/default";
-import { StatusTypeEnum } from "../../../../../../../../core/constant";
-import { PostAuthApi } from "../../../../../../../../core/libs";
+import { DefaultUser } from "../../../../../../../core/context/default";
+import { StatusTypeEnum } from "../../../../../../../core/constant";
+import { PostAuthApi } from "../../../../../../../core/libs";
 
 import { GetLibrary as GetWeb3Library, Disconnect } from "../web3";
 

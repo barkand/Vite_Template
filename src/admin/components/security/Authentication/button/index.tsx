@@ -45,23 +45,18 @@ export default function AuthButton() {
     }
 
     if (!(!loggedOut === true) && publicCtx.user.connected) {
-      if (
-        localStorage.getItem("userId") === null ||
-        localStorage.getItem("netId") === null
-      ) {
-        const logout = async () => {
-          let _result: any = await Logout();
-          setPublicCtx({
-            ...publicCtx,
-            user: _result.user,
-            alert: {
-              ..._result.alert,
-              message: t(_result.alert.message),
-            },
-          });
-        };
-        logout();
-      }
+      const logout = async () => {
+        let _result: any = await Logout();
+        setPublicCtx({
+          ...publicCtx,
+          user: _result.user,
+          alert: {
+            ..._result.alert,
+            message: t(_result.alert.message),
+          },
+        });
+      };
+      logout();
     }
   }, [loggedOut]);
 

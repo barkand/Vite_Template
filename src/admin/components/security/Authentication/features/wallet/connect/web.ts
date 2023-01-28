@@ -1,5 +1,5 @@
-import { StatusTypeEnum } from "../../../../../../../../core/constant";
-import { DefaultUser } from "../../../../../../../../core/context/default";
+import { StatusTypeEnum } from "../../../../../../../core/constant";
+import { DefaultUser } from "../../../../../../../core/context/default";
 
 import ConnectWallet from "./wallet";
 
@@ -58,7 +58,7 @@ const WebWallet = async () => {
     user: _user,
     alert: {
       open: true,
-      message: "LoginWalletSuccess",
+      message: "LoginSuccess",
       severity: StatusTypeEnum.Success,
     },
   };
