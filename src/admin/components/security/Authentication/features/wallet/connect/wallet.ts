@@ -2,7 +2,7 @@ import { DefaultUser } from "../../../../../../../core/context/default";
 import { StatusTypeEnum } from "../../../../../../../core/constant";
 import { PostAuthApi } from "../../../../../../../core/libs";
 
-import { GetLibrary as GetWeb3Library, Disconnect } from "../web3";
+import { GetLibrary as GetWeb3Library, Disconnect } from "../libs/web3";
 
 const ConnectWallet = async () => {
   const library: any = await GetWeb3Library();

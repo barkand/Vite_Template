@@ -4,7 +4,7 @@ import { PostAuthApi } from "../../../../../../../core/libs";
 
 import MobileWallet from "../connect/mobile";
 import WebWallet from "../connect/web";
-import { Disconnect } from "../web3";
+import { Disconnect } from "../libs/web3";
 
 class Auth {
   Login = async (isMobile: boolean) => {

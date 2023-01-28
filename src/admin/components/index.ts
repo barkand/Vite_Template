@@ -3,7 +3,7 @@ export { default as AuthButton } from "./security/Authentication/button";
 export {
   Utils,
   GetContract,
-} from "./security/Authentication/features/wallet/web3";
+} from "./security/Authentication/features/wallet/libs/web3";
 
 export { default as ProfileComponent } from "./profile";
 export { default as MiniProfileGadget } from "./profile/gadget/mini";
