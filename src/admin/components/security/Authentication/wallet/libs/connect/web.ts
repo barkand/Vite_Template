@@ -1,12 +1,12 @@
 import { StatusTypeEnum } from "../../../../../../../core/constant";
-import { DefaultWallet } from "../../../../../../../core/context/default";
+import { DefaultUser } from "../../../../../../../core/context/default";
 
 import ConnectWallet from "./wallet";
 
 const WebWallet = async () => {
   if (!(window as any).ethereum) {
     return {
-      wallet: DefaultWallet,
+      user: DefaultUser,
       alert: {
         open: true,
         message: "InstallMetaMask",
@@ -16,7 +16,7 @@ const WebWallet = async () => {
   }
 
   let errorMsg;
-  let _wallet = await (window as any).ethereum
+  let _user = await (window as any).ethereum
     .request({
       method: "wallet_requestPermissions",
       params: [{ eth_accounts: {} }],
@@ -45,7 +45,7 @@ const WebWallet = async () => {
 
   if (errorMsg) {
     return {
-      wallet: DefaultWallet,
+      user: DefaultUser,
       alert: {
         open: true,
         message: errorMsg,
@@ -55,7 +55,7 @@ const WebWallet = async () => {
   }
 
   return {
-    wallet: _wallet,
+    user: _user,
     alert: {
       open: true,
       message: "LoginWalletSuccess",

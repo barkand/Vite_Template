@@ -1,7 +1,4 @@
-import {
-  DefaultWallet,
-  DefaultUser,
-} from "../../../../../../core/context/default";
+import { DefaultUser } from "../../../../../../core/context/default";
 import { StatusTypeEnum } from "../../../../../../core/constant";
 import { PostAuthApi } from "../../../../../../core/libs";
 
@@ -15,17 +12,11 @@ async function Login() {
       ? await MobileWallet()
       : await WebWallet();
 
-  let _user = DefaultUser;
-  if (_result.wallet.connected) {
-    let _result = await PostAuthApi({}, "admin/user");
-    _user = _result?.items;
-  }
-
-  return { ..._result, user: _user };
+  return _result;
 }
 
 async function Logout() {
-  localStorage.removeItem("wallet");
+  localStorage.removeItem("userId");
   localStorage.removeItem("netId");
   await Disconnect();
 
@@ -40,7 +31,6 @@ async function Logout() {
   return {
     ..._result,
     user: DefaultUser,
-    wallet: DefaultWallet,
     alert: _alert,
   };
 }

@@ -13,8 +13,8 @@ export default function Authorization({
   const navigate = useNavigate();
 
   React.useEffect(() => {
-    if (!publicCtx.wallet.connected) navigate(RoutesTypeEnum.Home);
-  }, [publicCtx.wallet.connected]);
+    if (!publicCtx.user.connected) navigate(RoutesTypeEnum.Home);
+  }, [publicCtx.user.connected]);
 
   return <>{children}</>;
 }

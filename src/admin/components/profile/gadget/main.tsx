@@ -24,7 +24,7 @@ export default function MainProfileGadget(props: any) {
 
         <div style={{ direction: "ltr" }}>
           <Label size="caption" sx={{ mt: 1 }}>
-            @{publicCtx.user.name}
+            @{publicCtx.user.username}
           </Label>
         </div>
 

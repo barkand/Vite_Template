@@ -12,7 +12,7 @@ export default function AdminMenu(props: any) {
 
   return (
     <>
-      {publicCtx.wallet.connected ? (
+      {publicCtx.user.connected ? (
         <ButtonList
           to={RoutesTypeEnum.Profile}
           name={t("profile")}

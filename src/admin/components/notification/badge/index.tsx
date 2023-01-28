@@ -17,7 +17,7 @@ export default function Notification(props: any) {
       return;
     }
 
-    if (publicCtx.wallet.connected) {
+    if (publicCtx.user.connected) {
       const fetchData = async () => {
         let _result: any = await PostAuthApi({}, "admin/get_notifications");
 

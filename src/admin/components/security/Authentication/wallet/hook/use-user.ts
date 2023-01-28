@@ -14,7 +14,7 @@ export default function useUser() {
   return {
     loading,
     loggedOut,
-    wallet: data,
+    user: data,
     mutate,
   };
 }

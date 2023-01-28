@@ -17,7 +17,7 @@ export default function NotificationButton(props: any) {
   const [notify, setNotify] = React.useState<boolean>(notified);
 
   const onClick = async () => {
-    if (!publicCtx.wallet.connected) {
+    if (!publicCtx.user.connected) {
       setPublicCtx({
         ...publicCtx,
         alert: {

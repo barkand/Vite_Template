@@ -14,18 +14,18 @@ export default function Wallet() {
   const [loaded, setLoaded] = React.useState<boolean>(false);
   const { _, loading, loggedOut, mutate }: any = useUser();
 
-  const walletClick = () => {
-    const _wallet = async () => {
+  const authClick = () => {
+    const auth = async () => {
       let _result: any;
       if (!loggedOut === true) {
         _result = await Logout();
         mutate(() => null);
       } else {
-        let _wallet =
+        let _walletType =
           publicCtx.device.isMobile || !(window as any).ethereum
             ? "app"
             : "plugin";
-        localStorage.setItem("walletType", `${_wallet}`);
+        localStorage.setItem("walletType", `${_walletType}`);
 
         _result = await Login();
         mutate();
@@ -34,7 +34,6 @@ export default function Wallet() {
       setPublicCtx({
         ...publicCtx,
         user: _result.user,
-        wallet: _result.wallet,
         alert: {
           ..._result.alert,
           message: t(_result.alert.message),
@@ -42,7 +41,7 @@ export default function Wallet() {
       });
     };
 
-    _wallet();
+    auth();
   };
 
   React.useEffect(() => {
@@ -51,9 +50,9 @@ export default function Wallet() {
       return;
     }
 
-    if (!(!loggedOut === true) && publicCtx.wallet.connected) {
+    if (!(!loggedOut === true) && publicCtx.user.connected) {
       if (
-        localStorage.getItem("wallet") === null ||
+        localStorage.getItem("userId") === null ||
         localStorage.getItem("netId") === null
       ) {
         const logout = async () => {
@@ -61,7 +60,6 @@ export default function Wallet() {
           setPublicCtx({
             ...publicCtx,
             user: _result.user,
-            wallet: _result.wallet,
             alert: {
               ..._result.alert,
               message: t(_result.alert.message),
@@ -75,7 +73,7 @@ export default function Wallet() {
 
   return (
     <>
-      <IconButton onClick={walletClick} className="step-wallet">
+      <IconButton onClick={authClick} className="step-auth">
         {!loggedOut === true ? (
           <Tip title={t("logout")}>
             <LockOpenIcon />

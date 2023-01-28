@@ -1,10 +1,5 @@
 import { DeviceTypeEnum, StatusTypeEnum } from "../../constant";
-import {
-  DefaultCulture,
-  DefaultTheme,
-  DefaultUser,
-  DefaultWallet,
-} from "../default";
+import { DefaultCulture, DefaultTheme, DefaultUser } from "../default";
 
 let _device =
   "ontouchstart" in window || "onmsgesturechange" in window
@@ -18,8 +13,10 @@ if (_lang === "en-US") _lang = "en";
 let _mode: any =
   localStorage.getItem("background") ?? import.meta.env.VITE_DEFAULT_MODE;
 
-let _wallet: any = localStorage.getItem("wallet");
-let wallet = _wallet ? { account: _wallet, connected: true } : DefaultWallet;
+let _user: any = localStorage.getItem("userId");
+let user = _user
+  ? { ...DefaultUser, account: _user, connected: true }
+  : DefaultUser;
 
 const DefaultPublic = {
   device: { name: _device, isMobile: _device === DeviceTypeEnum.Mobile },
@@ -28,8 +25,7 @@ const DefaultPublic = {
     background: DefaultTheme[_mode],
     color: localStorage.getItem("color") ?? import.meta.env.VITE_DEFAULT_COLOR,
   },
-  user: DefaultUser,
-  wallet: wallet,
+  user: user,
   alert: {
     open: false,
     message: "",

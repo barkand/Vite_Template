@@ -29,7 +29,7 @@ export default function UsernameEditor(props: any) {
           ...publicCtx,
           user: {
             ...publicCtx.user,
-            name: _result.items.name,
+            username: _result.items.username,
             score: _result.items.score,
           },
         });

@@ -1,19 +1,19 @@
 import { StatusTypeEnum } from "../../../../../../../core/constant";
-import { DefaultWallet } from "../../../../../../../core/context/default";
+import { DefaultUser } from "../../../../../../../core/context/default";
 
 import ConnectWallet from "./wallet";
 
 const MobileWallet = async () => {
   let errorMsg;
-  let _wallet: any;
+  let _user: any;
 
   try {
-    _wallet = await ConnectWallet().catch((err) => {
+    _user = await ConnectWallet().catch((err) => {
       errorMsg = "LoginFailed";
     });
     if (
-      _wallet &&
-      _wallet.connected === true &&
+      _user &&
+      _user.connected === true &&
       !localStorage.getItem("netId")
     ) {
       errorMsg = "GoerliNetwork";
@@ -24,7 +24,7 @@ const MobileWallet = async () => {
 
   if (errorMsg) {
     return {
-      wallet: DefaultWallet,
+      user: DefaultUser,
       alert: {
         open: true,
         message: errorMsg,
@@ -34,7 +34,7 @@ const MobileWallet = async () => {
   }
 
   return {
-    wallet: _wallet,
+    user: _user,
     alert: {
       open: true,
       message: "LoginWalletSuccess",

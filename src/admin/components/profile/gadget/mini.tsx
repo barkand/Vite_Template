@@ -10,7 +10,7 @@ export default function MiniProfileGadget({ onClose }: { onClose: any }) {
 
   return (
     <>
-      {publicCtx.wallet.connected ? (
+      {publicCtx.user.connected ? (
         <Link to={RoutesTypeEnum.Profile}>
           <div
             style={{
@@ -31,12 +31,12 @@ export default function MiniProfileGadget({ onClose }: { onClose: any }) {
             >
               <Avatar
                 img={publicCtx.user.avatar}
-                withStatus={publicCtx.wallet.connected}
+                withStatus={publicCtx.user.connected}
               />
               <span style={{ paddingLeft: "20px" }}>
                 <>
                   <Label size="caption" style={{ marginTop: "10px" }}>
-                    @{publicCtx.user.name}
+                    @{publicCtx.user.username}
                   </Label>
                   <Rating
                     size="small"
@@ -50,11 +50,11 @@ export default function MiniProfileGadget({ onClose }: { onClose: any }) {
               size="caption"
               sx={{ paddingTop: "10px", paddingBottom: "25px" }}
             >
-              {publicCtx.wallet.account.substr(0, 12) +
+              {publicCtx.user.user_id.substr(0, 12) +
                 "..." +
-                publicCtx.wallet.account.substr(
-                  publicCtx.wallet.account.length - 13,
-                  publicCtx.wallet.account.length
+                publicCtx.user.user_id.substr(
+                  publicCtx.user.user_id.length - 13,
+                  publicCtx.user.user_id.length
                 )}
             </Label>
           </div>

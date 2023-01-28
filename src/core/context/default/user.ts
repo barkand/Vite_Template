@@ -1,5 +1,7 @@
 const user = {
-  name: "",
+  connected: false,
+  user_id: "",
+  username: "",
   avatar: "",
   score: 0,
 };

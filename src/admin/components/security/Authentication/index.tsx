@@ -13,7 +13,7 @@ export default function Authentication({ children }: { children: any }) {
       return;
     }
 
-    if (publicCtx.wallet.connected && publicCtx.user.name === "") {
+    if (publicCtx.user.connected && publicCtx.user.username === "") {
       const fillDefault = async () => {
         let _result = await PostAuthApi({}, "admin/user");
 
@@ -21,12 +21,14 @@ export default function Authentication({ children }: { children: any }) {
         if (_result && _result.items.avatar) {
           _avatar = `${import.meta.env.VITE_UPLOAD_PATH}/${
             import.meta.env.VITE_UPLOAD_FOLDER
-          }/users/${_result.items.wallet}.webp`;
+          }/users/${_result.items.user_id}.webp`;
 
           let _user = {
-            name: _result.items.username,
-            avatar: _avatar,
+            user_id: _result.items.user_id,
+            username: _result.items.username,
             score: _result.items.score ?? 0,
+            avatar: _avatar,
+            connected: true,
           };
 
           setPublicCtx({
