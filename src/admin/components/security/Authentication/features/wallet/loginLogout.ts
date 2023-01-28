@@ -2,15 +2,16 @@ import { DefaultUser } from "../../../../../../core/context/default";
 import { StatusTypeEnum } from "../../../../../../core/constant";
 import { PostAuthApi } from "../../../../../../core/libs";
 
-import MobileWallet from "../libs/connect/mobile";
-import WebWallet from "../libs/connect/web";
-import { Disconnect } from "../libs/web3";
+import MobileWallet from "../wallet/libs/connect/mobile";
+import WebWallet from "../wallet/libs/connect/web";
+import { Disconnect } from "../wallet/libs/web3";
 
-async function Login() {
+async function Login(isMobile: boolean) {
+  let _walletType = isMobile || !(window as any).ethereum ? "app" : "plugin";
+  localStorage.setItem("walletType", `${_walletType}`);
+
   let _result =
-    localStorage.getItem("walletType") === "app"
-      ? await MobileWallet()
-      : await WebWallet();
+    _walletType === "app" ? await MobileWallet() : await WebWallet();
 
   return _result;
 }

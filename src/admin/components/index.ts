@@ -1,5 +1,9 @@
 export { Authentication, Authorization } from "./security";
-export { default as WalletButton } from "./security/Authentication/wallet/button";
+export { default as AuthButton } from "./security/Authentication/button";
+export {
+  Utils,
+  GetContract,
+} from "./security/Authentication/features/wallet/libs/web3";
 
 export { default as ProfileComponent } from "./profile";
 export { default as MiniProfileGadget } from "./profile/gadget/mini";

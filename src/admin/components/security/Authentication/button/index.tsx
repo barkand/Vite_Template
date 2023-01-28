@@ -1,14 +1,14 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 
-import { PublicContext } from "../../../../../../core/context";
-import { IconButton, Tip } from "../../../../../../core/components";
-import { LockIcon, LockOpenIcon } from "../../../../../../core/icon";
+import { PublicContext } from "../../../../../core/context";
+import { IconButton, Tip } from "../../../../../core/components";
+import { LockIcon, LockOpenIcon } from "../../../../../core/icon";
 
 import useUser from "../hook/use-user";
 import { Login, Logout } from "./loginLogout";
 
-export default function Wallet() {
+export default function AuthButton() {
   const { t } = useTranslation(["admin"]);
   const { publicCtx, setPublicCtx }: any = React.useContext(PublicContext);
   const [loaded, setLoaded] = React.useState<boolean>(false);
@@ -21,13 +21,7 @@ export default function Wallet() {
         _result = await Logout();
         mutate(() => null);
       } else {
-        let _walletType =
-          publicCtx.device.isMobile || !(window as any).ethereum
-            ? "app"
-            : "plugin";
-        localStorage.setItem("walletType", `${_walletType}`);
-
-        _result = await Login();
+        _result = await Login(publicCtx.device.isMobile);
         mutate();
       }
 
@@ -56,7 +50,7 @@ export default function Wallet() {
         localStorage.getItem("netId") === null
       ) {
         const logout = async () => {
-          let _result = await Logout();
+          let _result: any = await Logout();
           setPublicCtx({
             ...publicCtx,
             user: _result.user,

@@ -1,8 +1,8 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-import { RoutesTypeEnum } from "../../../../core/constant";
-import { PublicContext } from "../../../../core/context";
+import { RoutesTypeEnum } from "../../../../../core/constant";
+import { PublicContext } from "../../../../../core/context";
 
 export default function Authorization({
   children,

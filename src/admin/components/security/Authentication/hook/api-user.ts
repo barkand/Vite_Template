@@ -1,4 +1,4 @@
-import { PostAuthApi } from "../../../../../../core/libs";
+import { PostAuthApi } from "../../../../../core/libs";
 
 let userFetcher = async () => {
   if (

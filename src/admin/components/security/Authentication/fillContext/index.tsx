@@ -1,7 +1,7 @@
 import React from "react";
 
-import { PublicContext } from "../../../../core/context";
-import { PostAuthApi } from "../../../../core/libs";
+import { PublicContext } from "../../../../../core/context";
+import { PostAuthApi } from "../../../../../core/libs";
 
 export default function Authentication({ children }: { children: any }) {
   const { publicCtx, setPublicCtx }: any = React.useContext(PublicContext);
