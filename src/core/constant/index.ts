@@ -6,4 +6,5 @@ export {
   RoutesType as RoutesTypeEnum,
   EditType as EditTypeEnum,
   StatusType as StatusTypeEnum,
+  AuthType as AuthTypeEnum,
 } from "./enum";
