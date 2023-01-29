@@ -10,7 +10,7 @@ const SendCode = async (user_id: string) => {
 const Login = async (user_id: string, code: string) => {
   let _result: any = await PostAuthApi(
     { user_id: user_id, code: code },
-    "admin/login"
+    "admin/login_code"
   );
 
   if (_result.code === 200 && _result.items.connected === true) {
