@@ -34,5 +34,7 @@
   "open-tour": "Open Tour",
   "mail": "Email",
   "mobile": "Mobile",
-  "send-code": "Send Code"
+  "send-code": "Send Code",
+  "change-mobile": "Change Mobile",
+  "change-mail": "Change Email"
 }

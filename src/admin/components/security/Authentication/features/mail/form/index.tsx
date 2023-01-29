@@ -40,6 +40,7 @@ export default function Form({ openForm, setOpenForm, type, mutate }: any) {
     if (_result.code === 200) {
       mutate();
       setOpenForm(false);
+      setSended(false);
     }
 
     setPublicCtx({
@@ -59,19 +60,25 @@ export default function Form({ openForm, setOpenForm, type, mutate }: any) {
           fullscreen={publicCtx.device.isMobile}
         >
           <GridHeader
-            sx={{ mt: 1, mb: 5, p: 3 }}
+            sx={{ mt: 1, mb: 5, minHeight: 200, width: 350 }}
             rowSpacing={4}
             textAlign="center"
           >
-            <GridItem xs={3}>{t(type)}</GridItem>
             {sended ? (
               <>
+                <GridItem xs={3}>{t(type)}</GridItem>
                 <GridItem xs={9}>{email}</GridItem>
                 <GridItem xs={3}>{"code"}</GridItem>
                 <GridItem xs={9}>
                   <Textbox onChange={codeHandle} />
                 </GridItem>
                 <GridItem xs={12}>
+                  <Button
+                    title={t(`change-${import.meta.env.VITE_AUTH_TYPE}`)}
+                    variant="contained"
+                    onClick={() => setSended(false)}
+                    sx={{ mr: 5 }}
+                  />
                   <Button
                     title={t("login")}
                     variant="contained"
@@ -81,9 +88,11 @@ export default function Form({ openForm, setOpenForm, type, mutate }: any) {
               </>
             ) : (
               <>
+                <GridItem xs={3}>{t(type)}</GridItem>
                 <GridItem xs={9}>
                   <Textbox onChange={emailHandle} />
                 </GridItem>
+                <GridItem xs={12}> </GridItem>
                 <GridItem xs={12}>
                   <Button
                     title={t("send-code")}

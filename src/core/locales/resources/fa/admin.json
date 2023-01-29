@@ -34,5 +34,7 @@
   "open-tour": "مشاهده تور",
   "mail": "ایمیل",
   "mobile": "موبایل",
-  "send-code": "ارسال کد"
+  "send-code": "ارسال کد",
+  "change-mobile": "اصلاح موبایل",
+  "change-mail": "اصلاح ایمیل"
 }
