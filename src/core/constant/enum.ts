@@ -39,3 +39,9 @@ export const enum StatusType {
   Warning = "warning",
   Info = "info",
 }
+
+export enum AuthType {
+  wallet,
+  mobile,
+  mail,
+}
