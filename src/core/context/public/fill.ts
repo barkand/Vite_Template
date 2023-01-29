@@ -15,7 +15,7 @@ let _mode: any =
 
 let _user: any = localStorage.getItem("userId");
 let user = _user
-  ? { ...DefaultUser, account: _user, connected: true }
+  ? { ...DefaultUser, user_id: _user, connected: true }
   : DefaultUser;
 
 const DefaultPublic = {
