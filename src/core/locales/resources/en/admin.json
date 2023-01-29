@@ -31,5 +31,8 @@
   "un-notify": "I don't care",
   "notify-permission-denied": "Permission confirmation is required for notification",
   "welcome-tour": "Welcome to",
-  "open-tour": "Open Tour"
+  "open-tour": "Open Tour",
+  "mail": "Email",
+  "mobile": "Mobile",
+  "send-code": "Send Code"
 }

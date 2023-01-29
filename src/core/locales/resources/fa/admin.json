@@ -31,5 +31,8 @@
   "un-notify": "واسم مهم نیست",
   "notify-permission-denied": "برای اطلاع رسانی نیاز به تایید مجوز است",
   "welcome-tour": "خوش آمدید به",
-  "open-tour": "مشاهده تور"
+  "open-tour": "مشاهده تور",
+  "mail": "ایمیل",
+  "mobile": "موبایل",
+  "send-code": "ارسال کد"
 }
