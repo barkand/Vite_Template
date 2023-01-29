@@ -41,7 +41,7 @@ export const enum StatusType {
 }
 
 export enum AuthType {
-  wallet,
-  mobile,
-  mail,
+  Wallet = "wallet",
+  Mobile = "mobile",
+  Mail = "mail",
 }
