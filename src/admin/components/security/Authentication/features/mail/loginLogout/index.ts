@@ -2,8 +2,16 @@ import { DefaultUser } from "../../../../../../../core/context/default";
 import { StatusTypeEnum } from "../../../../../../../core/constant";
 import { PostAuthApi } from "../../../../../../../core/libs";
 
-const Login = async (user_id: string) => {
-  let _result: any = await PostAuthApi({ user_id: user_id }, "admin/login");
+const SendCode = async (user_id: string) => {
+  let _result: any = await PostAuthApi({ user_id: user_id }, "admin/send_code");
+  return _result;
+};
+
+const Login = async (user_id: string, code: string) => {
+  let _result: any = await PostAuthApi(
+    { user_id: user_id, code: code },
+    "admin/login"
+  );
 
   if (_result.code === 200 && _result.items.connected === true) {
     localStorage.setItem("userId", user_id);
@@ -19,9 +27,18 @@ const Login = async (user_id: string) => {
       }/users/${_result.items.user_id}.webp`;
     }
 
-    return { user: _user };
+    return {
+      code: 200,
+      user: _user,
+      alert: {
+        open: true,
+        message: "LoginSuccess",
+        severity: StatusTypeEnum.Success,
+      },
+    };
   } else {
     return {
+      code: _result.code,
       user: DefaultUser,
       alert: {
         open: true,
@@ -50,4 +67,4 @@ const Logout = async () => {
   };
 };
 
-export { Login, Logout };
+export { SendCode, Login, Logout };
