@@ -22,6 +22,7 @@ interface ImportMetaEnv {
   readonly VITE_INFURA_ID: string;
   readonly VITE_WELCOME_FORM: string;
   readonly VITE_AUTH_TYPE: string;
+  readonly VITE_WAIT_TIME_FOR_CODE: string;
 }
 
 interface ImportMeta {
