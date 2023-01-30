@@ -24,7 +24,7 @@ export default function AvatarEditor(props: any) {
         ...publicCtx,
         alert: {
           open: true,
-          message: t("ImageSizeError"),
+          message: t("image-size-error"),
           severity: StatusTypeEnum.Error,
         },
       });
@@ -56,7 +56,7 @@ export default function AvatarEditor(props: any) {
           ...publicCtx,
           alert: {
             open: true,
-            message: t("UnexpectedErrorUploadAvatar"),
+            message: t("unexpected-error-upload-avatar"),
             severity: StatusTypeEnum.Error,
           },
         });

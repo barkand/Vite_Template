@@ -22,7 +22,7 @@ export default function NotificationButton(props: any) {
         ...publicCtx,
         alert: {
           open: true,
-          message: t("NeedLogin"),
+          message: t("need-login"),
           severity: StatusTypeEnum.Error,
         },
       });

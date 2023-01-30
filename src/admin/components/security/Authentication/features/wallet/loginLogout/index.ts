@@ -24,7 +24,7 @@ const Logout = async () => {
   let _result = await PostAuthApi({}, "admin/logout");
   let _alert: any = {
     open: true,
-    message: _result.code === 200 ? "LogoutSuccess" : "LogoutFailed",
+    message: _result.code === 200 ? "logout-success" : "logout-failed",
     severity:
       _result.code === 200 ? StatusTypeEnum.Warning : StatusTypeEnum.Error,
   };

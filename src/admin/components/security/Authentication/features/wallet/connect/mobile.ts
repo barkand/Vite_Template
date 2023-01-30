@@ -9,13 +9,13 @@ const MobileWallet = async () => {
 
   try {
     _user = await ConnectWallet().catch((err) => {
-      errorMsg = "LoginFailed";
+      errorMsg = "login-failed";
     });
     if (_user && _user.connected === true && !localStorage.getItem("netId")) {
-      errorMsg = "GoerliNetwork";
+      errorMsg = "goerli-network";
     }
   } catch (e) {
-    errorMsg = "NeedConfirmToConnect";
+    errorMsg = "need-confirm-to-connect";
   }
 
   if (errorMsg) {
@@ -33,7 +33,7 @@ const MobileWallet = async () => {
     user: _user,
     alert: {
       open: true,
-      message: "LoginSuccess",
+      message: "login-success",
       severity: StatusTypeEnum.Success,
     },
   };

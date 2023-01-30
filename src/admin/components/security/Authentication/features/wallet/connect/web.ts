@@ -9,7 +9,7 @@ const WebWallet = async () => {
       user: DefaultUser,
       alert: {
         open: true,
-        message: "InstallMetaMask",
+        message: "install-metamask",
         severity: StatusTypeEnum.Warning,
       },
     };
@@ -32,15 +32,15 @@ const WebWallet = async () => {
         if (_result && _netID) {
           return _result;
         } else {
-          errorMsg = "GoerliNetwork";
+          errorMsg = "goerli-network";
         }
       } else {
-        errorMsg = "PermissionsNeeded";
+        errorMsg = "permissions-needed";
       }
     })
     .catch((err: any) => {
       // EIP-1193 userRejectedRequest error
-      errorMsg = err.code === 4001 ? "NeedConfirmToConnect" : "LoginFailed";
+      errorMsg = err.code === 4001 ? "need-confirm-to-connect" : "login-failed";
     });
 
   if (errorMsg) {
@@ -58,7 +58,7 @@ const WebWallet = async () => {
     user: _user,
     alert: {
       open: true,
-      message: "LoginSuccess",
+      message: "login-success",
       severity: StatusTypeEnum.Success,
     },
   };

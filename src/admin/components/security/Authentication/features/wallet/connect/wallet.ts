@@ -38,7 +38,7 @@ const ConnectWallet = async () => {
           user: DefaultUser,
           alert: {
             open: true,
-            message: "LoginFailed",
+            message: "login-failed",
             severity: StatusTypeEnum.Error,
           },
         };
