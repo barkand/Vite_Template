@@ -15,19 +15,19 @@ import { Login, SendCode } from "../loginLogout";
 export default function Form({ openForm, setOpenForm, type, mutate }: any) {
   const { publicCtx, setPublicCtx }: any = React.useContext(PublicContext);
   const { t } = useTranslation(["admin"]);
-  const [mobile, setMobile] = React.useState("");
+  const [device, setDevice] = React.useState("");
   const [code, setCode] = React.useState("");
   const [sended, setSended] = React.useState(false);
 
-  const emailHandle = (event: React.ChangeEvent<HTMLInputElement>) =>
-    setMobile(event.target.value);
+  const deviceHandle = (event: React.ChangeEvent<HTMLInputElement>) =>
+    setDevice(event.target.value);
 
   const codeHandle = (event: React.ChangeEvent<HTMLInputElement>) =>
     setCode(event.target.value);
 
   const sendCode = async () => {
-    if (mobile === "") return;
-    let _result = await SendCode(mobile);
+    if (device === "") return;
+    let _result = await SendCode(device);
 
     if (_result.code === 200) setSended(true);
   };
@@ -35,7 +35,7 @@ export default function Form({ openForm, setOpenForm, type, mutate }: any) {
   const login = async () => {
     if (code === "") return;
 
-    let _result: any = await Login(mobile, code);
+    let _result: any = await Login(device, code);
 
     if (_result.code === 200) {
       mutate();
@@ -70,7 +70,7 @@ export default function Form({ openForm, setOpenForm, type, mutate }: any) {
             {sended ? (
               <>
                 <GridItem xs={3}>{t(type)}</GridItem>
-                <GridItem xs={9}>{mobile}</GridItem>
+                <GridItem xs={9}>{device}</GridItem>
                 <GridItem xs={3}>{"code"}</GridItem>
                 <GridItem xs={9}>
                   <Textbox onChange={codeHandle} />
@@ -93,7 +93,7 @@ export default function Form({ openForm, setOpenForm, type, mutate }: any) {
               <>
                 <GridItem xs={3}>{t(type)}</GridItem>
                 <GridItem xs={9}>
-                  <Textbox onChange={emailHandle} />
+                  <Textbox onChange={deviceHandle} />
                 </GridItem>
                 <GridItem xs={12}> </GridItem>
                 <GridItem xs={12}>

@@ -4,7 +4,7 @@ import { PostAuthApi } from "../../../../../../../core/libs";
 
 const SendCode = async (user_id: string) => {
   let _result: any = await PostAuthApi(
-    { user_id: user_id, type: "mail" },
+    { user_id: user_id, type: import.meta.env.VITE_AUTH_TYPE },
     "admin/send_code"
   );
   return _result;

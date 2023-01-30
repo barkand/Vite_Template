@@ -6,8 +6,7 @@ import { IconButton, Tip } from "../../../../../../../core/components";
 import { LockIcon, LockOpenIcon } from "../../../../../../../core/icon";
 
 import useUser from "../../../hook/use-user";
-import Form from "../form";
-import { Logout } from "../loginLogout";
+import { Form, Logout } from "../../shared";
 
 export default function MailButton() {
   const { t } = useTranslation(["admin"]);
