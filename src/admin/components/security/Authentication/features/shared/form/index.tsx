@@ -1,5 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
+import Countdown from "react-countdown";
 
 import { PublicContext } from "../../../../../../../core/context";
 import {
@@ -76,6 +77,17 @@ export default function Form({ openForm, setOpenForm, type, mutate }: any) {
                   <Textbox onChange={codeHandle} />
                 </GridItem>
                 <GridItem xs={12}>
+                  <Countdown
+                    date={
+                      Date.now() +
+                      parseInt(import.meta.env.VITE_WAIT_TIME_FOR_CODE) *
+                        1000 *
+                        60
+                    }
+                    onComplete={() => setSended(false)}
+                  />
+                </GridItem>
+                <GridItem xs={12}>
                   <Button
                     title={t(`change-${import.meta.env.VITE_AUTH_TYPE}`)}
                     variant="contained"
@@ -93,7 +105,7 @@ export default function Form({ openForm, setOpenForm, type, mutate }: any) {
               <>
                 <GridItem xs={3}>{t(type)}</GridItem>
                 <GridItem xs={9}>
-                  <Textbox onChange={deviceHandle} />
+                  <Textbox onChange={deviceHandle} value={device} />
                 </GridItem>
                 <GridItem xs={12}> </GridItem>
                 <GridItem xs={12}>
