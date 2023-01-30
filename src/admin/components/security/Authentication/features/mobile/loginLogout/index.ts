@@ -3,10 +3,7 @@ import { StatusTypeEnum } from "../../../../../../../core/constant";
 import { PostAuthApi } from "../../../../../../../core/libs";
 
 const SendCode = async (user_id: string) => {
-  let _result: any = await PostAuthApi(
-    { user_id: user_id, type: "mail" },
-    "admin/send_code"
-  );
+  let _result: any = await PostAuthApi({ user_id: user_id, type: "mobile" }, "admin/send_code");
   return _result;
 };
 

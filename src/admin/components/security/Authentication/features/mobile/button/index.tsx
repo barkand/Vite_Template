@@ -9,7 +9,7 @@ import useUser from "../../../hook/use-user";
 import Form from "../form";
 import { Logout } from "../loginLogout";
 
-export default function MailButton() {
+export default function MobileButton() {
   const { t } = useTranslation(["admin"]);
   const { publicCtx, setPublicCtx }: any = React.useContext(PublicContext);
   const [loaded, setLoaded] = React.useState<boolean>(false);
