@@ -6,6 +6,7 @@ interface ImportMetaEnv {
   readonly VITE_DEFAULT_COPY_RIGHT: string;
   readonly VITE_CLIENT_PATH: string;
   readonly VITE_SERVER_PATH: string;
+  readonly VITE_API_PATH: string;
   readonly VITE_DEFAULT_MODE: string;
   readonly VITE_DEFAULT_COLOR: string;
   readonly VITE_DEFAULT_LANGUAGE: string;
