@@ -26,5 +26,6 @@
   "cnt-sale-cards": "Number of sold cards",
   "cnt-post-players": "Number of players by position",
   "avg-age-players": "Average age of players",
-  "change-prices": "Price fluctuations"
+  "change-prices": "Price fluctuations",
+  "full-buys": "You can have a maximum of 9 cards"
 }
