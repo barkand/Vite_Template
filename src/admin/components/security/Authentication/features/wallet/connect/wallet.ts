@@ -26,12 +26,15 @@ const ConnectWallet = async () => {
           localStorage.setItem("userId", _user.user_id);
           localStorage.setItem("netId", netId);
 
-          _user.username = _result.items.username;
-          _user.score = _result.items.score;
-          if (_result.items.avatar) {
-            _user.avatar = `${import.meta.env.VITE_UPLOAD_PATH}/${
-              import.meta.env.VITE_UPLOAD_FOLDER
-            }/users/${_result.items.user_id}.webp`;
+          let _result_user: any = await PostAuthApi({}, "admin/user");
+          if (_result_user.code === 200) {
+            _user.username = _result_user.items.username ?? "";
+            _user.score = _result_user.items.score ?? 0;
+            if (_result_user.items.avatar) {
+              _user.avatar = `${import.meta.env.VITE_UPLOAD_PATH}/${
+                import.meta.env.VITE_UPLOAD_FOLDER
+              }/users/${_result.items.user_id}.webp`;
+            }
           }
         }
       } else {
