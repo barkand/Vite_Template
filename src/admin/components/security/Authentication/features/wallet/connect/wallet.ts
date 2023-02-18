@@ -14,7 +14,8 @@ const ConnectWallet = async () => {
 
   if (_user.connected === true) {
     let netId = await eth.net.getId();
-    if (netId === 5) {
+
+    if (netId === 5 || netId === 5777) {
       let _result: any = await PostAuthApi(
         { user_id: _user.user_id },
         "admin/login"
