@@ -17,19 +17,19 @@ export default function Authentication({ children }: { children: any }) {
       const fillDefault = async () => {
         let _result = await PostAuthApi({}, "admin/user");
 
-        let _avatar = "";
-        if (_result && _result.items.avatar) {
-          _avatar = `${import.meta.env.VITE_UPLOAD_PATH}/${
-            import.meta.env.VITE_UPLOAD_FOLDER
-          }/users/${_result.items.user_id}.webp`;
-
+        if (_result && _result.code === 200) {
           let _user = {
             user_id: _result.items.user_id,
             username: _result.items.username,
             score: _result.items.score ?? 0,
-            avatar: _avatar,
+            avatar: "",
             connected: true,
           };
+
+          if (_result.items.avatar)
+            _user.avatar = `${import.meta.env.VITE_UPLOAD_PATH}/${
+              import.meta.env.VITE_UPLOAD_FOLDER
+            }/users/${_result.items.user_id}.webp`;
 
           setPublicCtx({
             ...publicCtx,
