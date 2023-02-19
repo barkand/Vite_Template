@@ -10,5 +10,6 @@
   "games": "Your Games",
   "team-logo": "Select Your Team Logo",
   "team-name": "Input Your Team Name",
-  "team-name-already-exist": "This Team Name Already Exist"
+  "team-name-already-exist": "This Team Name Already Exist",
+  "no-for-sale": "You cannot add cards that are for sale to the team"
 }
