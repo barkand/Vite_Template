@@ -11,9 +11,11 @@ import {
   Divider,
   ListItemButton,
 } from "@mui/material";
+import { useTranslation } from "react-i18next";
 
 import { PublicContext } from "../../context";
 import { not, intersection, union } from "../../libs/base/array";
+import { StatusTypeEnum } from "../../../core/constant";
 
 export default function TransferList({
   LeftList,
@@ -22,7 +24,8 @@ export default function TransferList({
   LeftTitle,
   RightTitle,
 }: any) {
-  const { publicCtx }: { publicCtx: any } = React.useContext(PublicContext);
+  const { publicCtx, setPublicCtx }: any = React.useContext(PublicContext);
+  const { t } = useTranslation(["game"]);
   const [loaded, setLoaded] = React.useState<boolean>(false);
   const [checked, setChecked] = React.useState<readonly number[]>([]);
   const [left, setLeft] = React.useState<readonly number[]>([]);
@@ -84,9 +87,26 @@ export default function TransferList({
   };
 
   const handleCheckedRight = () => {
-    setRight(right.concat(leftChecked));
-    setLeft(not(left, leftChecked));
-    setChecked(not(checked, leftChecked));
+    let for_sale = false;
+    Object.keys(leftChecked).map((id: any) => {
+      if (LeftList.find((n: any) => n.id === leftChecked[id]).for_sale === true)
+        for_sale = true;
+    });
+
+    if (for_sale) {
+      setPublicCtx({
+        ...publicCtx,
+        alert: {
+          open: true,
+          message: t("no-for-sale"),
+          severity: StatusTypeEnum.Error,
+        },
+      });
+    } else {
+      setRight(right.concat(leftChecked));
+      setLeft(not(left, leftChecked));
+      setChecked(not(checked, leftChecked));
+    }
   };
 
   const handleCheckedLeft = () => {
