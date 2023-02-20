@@ -15,7 +15,7 @@ const ConnectWallet = async () => {
   if (_user.connected === true) {
     let netId = await eth.net.getId();
 
-    if (netId === 5 || netId === 5777) {
+    if (netId === import.meta.env.VITE_NET_ID) {
       let _result: any = await PostAuthApi(
         { user_id: _user.user_id },
         "admin/login"
