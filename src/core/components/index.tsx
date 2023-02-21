@@ -26,6 +26,7 @@ export { default as Table } from "./mui/table";
 export { default as Switch } from "./mui/switch";
 export { default as TransferList } from "./mui/transferList";
 export { default as Media } from "./mui/media";
+export { default as Checkbox } from "./mui/checkbox";
 export {
   Rectangle as RSkeleton,
   Circle as CSkeleton,
