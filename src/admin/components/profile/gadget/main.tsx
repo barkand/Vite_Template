@@ -19,7 +19,7 @@ export default function MainProfileGadget(props: any) {
         <img
           crossOrigin="anonymous"
           src={publicCtx.user.avatar}
-          style={{ width: "15vh", height: "15vh" }}
+          style={{ width: "15vh", height: "15vh", borderRadius: 25 }}
         />
 
         <div style={{ direction: "ltr" }}>

@@ -33,7 +33,6 @@ export default function MiniProfileGadget({ onClose }: { onClose: any }) {
               <Avatar
                 img={publicCtx.user.avatar}
                 withStatus={publicCtx.user.connected}
-                style={{ width: "5vh", height: "5vh" }}
               />
 
               <span style={{ paddingLeft: "20px" }}>
