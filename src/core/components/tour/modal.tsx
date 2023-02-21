@@ -2,7 +2,7 @@ import React from "react";
 import { useTour } from "@reactour/tour";
 import { useTranslation } from "react-i18next";
 
-import { Modal, Button, Label, Divider } from "../../components";
+import { Modal, Button, Label, Divider, Checkbox } from "../../components";
 
 import { PublicContext } from "../../context";
 
@@ -13,13 +13,17 @@ export default function WelcomeForm() {
   const { setIsOpen } = useTour();
 
   const closeForm = () => {
-    localStorage.setItem("tour", "false");
     setOpen(false);
   };
+
   const startTour = () => {
     setOpen(false);
     setIsOpen(true);
+  };
+
+  const doNotShowForm = () => {
     localStorage.setItem("tour", "false");
+    closeForm();
   };
 
   return (
@@ -35,6 +39,7 @@ export default function WelcomeForm() {
                 {t("welcome-tour")} {t("site-name", { ns: "public" })}
               </Label>
               <Divider sx={{ mb: 2, mt: 4 }} />
+
               <Button
                 onClick={startTour}
                 variant="outlined"
@@ -46,6 +51,12 @@ export default function WelcomeForm() {
                 variant="outlined"
                 title={t("close")}
                 sx={{ ml: 2, mr: 2 }}
+              />
+
+              <Divider sx={{ mb: 2, mt: 4 }} />
+              <Checkbox
+                label={t("Do-not-show-tour")}
+                handleChange={doNotShowForm}
               />
             </div>
           </Modal>
