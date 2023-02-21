@@ -16,11 +16,18 @@ export default function MainProfileGadget(props: any) {
           alignItems: "center",
         }}
       >
-        <img
-          crossOrigin="anonymous"
-          src={publicCtx.user.avatar}
-          style={{ width: "15vh", height: "15vh", borderRadius: 25 }}
-        />
+        {publicCtx.user.avatar !== "" ? (
+          <img
+            crossOrigin="anonymous"
+            src={publicCtx.user.avatar}
+            style={{ width: "15vh", height: "15vh", borderRadius: 50 }}
+          />
+        ) : (
+          <Avatar
+            img={publicCtx.user.avatar}
+            style={{ width: "15vh", height: "15vh" }}
+          />
+        )}
 
         <div style={{ direction: "ltr" }}>
           <Label size="caption" sx={{ mt: 1 }}>

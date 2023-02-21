@@ -41,13 +41,17 @@ export default function BadgeAvatars(props: any) {
             variant="dot"
             anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
           >
-            <img
-              crossOrigin="anonymous"
-              alt={alt}
-              src={img}
-              style={{ width: "5vh", height: "5vh", borderRadius: 25 }}
-              {...other}
-            />
+            {img !== "" ? (
+              <img
+                crossOrigin="anonymous"
+                alt={alt}
+                src={img}
+                style={{ width: "5vh", height: "5vh", borderRadius: 25 }}
+                {...other}
+              />
+            ) : (
+              <Avatar alt={alt} src={img} {...other} />
+            )}
           </StyledBadge>
         ) : (
           <Avatar alt={alt} src={img} {...other} />
