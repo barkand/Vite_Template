@@ -38,7 +38,6 @@ export { default as Tilt } from "./effect/tilt";
 export { default as TiltEffect } from "./effect";
 
 export { Provider as TourProvider } from "./tour";
-export { default as HelpMenu } from "./menu/help";
 export { default as HomeMenu } from "./menu/home";
 
 export { default as Box } from "./toys/box";
