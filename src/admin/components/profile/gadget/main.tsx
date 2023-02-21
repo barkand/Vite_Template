@@ -16,10 +16,10 @@ export default function MainProfileGadget(props: any) {
           alignItems: "center",
         }}
       >
-        <Avatar
-          img={publicCtx.user.avatar}
-          withStatus={false}
-          sx={{ width: "15vh", height: "15vh" }}
+        <img
+          crossOrigin="anonymous"
+          src={publicCtx.user.avatar}
+          style={{ width: "15vh", height: "15vh" }}
         />
 
         <div style={{ direction: "ltr" }}>
