@@ -31,7 +31,7 @@ const ConnectWallet = async () => {
             _user.username = _result_user.items.username ?? "";
             _user.score = _result_user.items.score ?? 0;
             if (_result_user.items.avatar) {
-              _user.avatar = `${import.meta.env.VITE_UPLOAD_PATH}/${
+              _user.avatar = `${import.meta.env.VITE_SERVER_PATH}/${
                 import.meta.env.VITE_UPLOAD_FOLDER
               }/users/${_result.items.user_id}.webp`;
             }

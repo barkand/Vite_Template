@@ -25,7 +25,7 @@ const Login = async (user_id: string, code: string) => {
     _user.username = _result.items.username;
     _user.score = _result.items.score;
     if (_result.items.avatar) {
-      _user.avatar = `${import.meta.env.VITE_UPLOAD_PATH}/${
+      _user.avatar = `${import.meta.env.VITE_SERVER_PATH}/${
         import.meta.env.VITE_UPLOAD_FOLDER
       }/users/${_result.items.user_id}.webp`;
     }

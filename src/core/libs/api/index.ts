@@ -1,5 +1,5 @@
 const PostAuth = async (params: any, route: string) => {
-  let _result = await fetch(`${import.meta.env.VITE_API_PATH}${route}`, {
+  let _result = await fetch(`${import.meta.env.VITE_SERVER_PATH}/api/${route}`, {
     method: "post",
     headers: { "Content-Type": "application/json" },
     credentials: "include",
@@ -15,7 +15,7 @@ const PostAuth = async (params: any, route: string) => {
 };
 
 const Post = async (params: any, route: string) => {
-  let _result = await fetch(`${import.meta.env.VITE_API_PATH}${route}`, {
+  let _result = await fetch(`${import.meta.env.VITE_SERVER_PATH}/api/${route}`, {
     method: "post",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ params }),
@@ -30,7 +30,7 @@ const Post = async (params: any, route: string) => {
 };
 
 const Upload = async (params: any, route: string) => {
-  let _result = await fetch(`${import.meta.env.VITE_API_PATH}${route}`, {
+  let _result = await fetch(`${import.meta.env.VITE_SERVER_PATH}/api/${route}`, {
     method: "POST",
     credentials: "include",
     body: params.picture,

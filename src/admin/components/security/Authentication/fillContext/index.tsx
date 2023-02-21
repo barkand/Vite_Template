@@ -27,7 +27,7 @@ export default function Authentication({ children }: { children: any }) {
           };
 
           if (_result.items.avatar)
-            _user.avatar = `${import.meta.env.VITE_UPLOAD_PATH}/${
+            _user.avatar = `${import.meta.env.VITE_SERVER_PATH}/${
               import.meta.env.VITE_UPLOAD_FOLDER
             }/users/${_result.items.user_id}.webp`;
 

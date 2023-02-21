@@ -1,5 +1,5 @@
 const SendLogs = async (type: string, message: string) => {
-  await fetch(`${import.meta.env.VITE_API_PATH}log/client`, {
+  await fetch(`${import.meta.env.VITE_SERVER_PATH}/api/log/client`, {
     method: "post",
     headers: { "Content-Type": "application/json" },
     credentials: "include",
