@@ -37,7 +37,7 @@ export default function Notification(props: any) {
   return (
     <>
       <BadgeButton
-        sx={props.sx}
+        style={props.style}
         items={notifications}
         link={RoutesTypeEnum.Item}
         onClick={seenItem}

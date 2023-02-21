@@ -7,7 +7,7 @@ export default function AppToolbar(props: any) {
     <AppBar
       position="static"
       sx={{
-        ...props.sx,
+        ...props.style,
         textAlign: "center",
       }}
       enableColorOnDark

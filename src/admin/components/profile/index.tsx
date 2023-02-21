@@ -13,7 +13,7 @@ export default function Profile({ children }: { children: any }) {
     <Authorization>
       <div style={{ display: "flex" }}>
         <Box
-          sx={{
+          style={{
             marginTop: "100px",
             width: publicCtx.device.isMobile ? "100%" : "80%",
             marginLeft: "auto",

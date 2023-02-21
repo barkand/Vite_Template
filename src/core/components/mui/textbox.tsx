@@ -15,6 +15,7 @@ export default function Textbox(props: any) {
       variant={VariantTypes.standard}
       label={label}
       onChange={onChange}
+      sx={{ ...props.style }}
       {...other}
     />
   );

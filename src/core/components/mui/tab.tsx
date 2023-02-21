@@ -29,13 +29,7 @@ export function TabsHeader(props: TabsHeaderProps) {
   );
 }
 
-interface TabItemProps {
-  label: string;
-  icon: any;
-  index: number;
-}
-
-export function TabLabel(props: TabItemProps) {
+export function TabLabel(props: any) {
   const { label, icon, index, ...other } = props;
   const { publicCtx }: { publicCtx: any } = React.useContext(PublicContext);
 
@@ -46,6 +40,7 @@ export function TabLabel(props: TabItemProps) {
       icon={icon}
       aria-controls={`simple-tabpanel-${index}`}
       iconPosition={publicCtx.device.isMobile ? "top" : "start"}
+      sx={{ ...props.style }}
       {...other}
     />
   );

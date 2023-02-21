@@ -17,7 +17,7 @@ export default function Combo(props: any) {
   return (
     <FormControl
       variant="standard"
-      sx={{ ...props.sx, width: "100%" }}
+      sx={{ ...props.style, width: "100%" }}
       {...other}
     >
       {props.title && <InputLabel>{props.title}</InputLabel>}

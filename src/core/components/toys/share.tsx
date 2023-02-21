@@ -74,12 +74,12 @@ export default function ShareButton({
   }));
 
   return (
-    <Box sx={{ transform: "translateZ(0px)" }}>
+    <Box style={{ transform: "translateZ(0px)" }}>
       <StyledSpeedDial
         ariaLabel="Share Link"
         icon={
           <ShareIcon
-            sx={{
+            style={{
               color: publicCtx.theme.background.isDark ? "white" : "black",
             }}
           />

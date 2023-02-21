@@ -4,7 +4,7 @@ export default function PaperMUI(props: any) {
   const { children, shadow, ...other } = props;
 
   return (
-    <Paper elevation={shadow} {...other}>
+    <Paper elevation={shadow} sx={{ ...props.style }} {...other}>
       {children}
     </Paper>
   );

@@ -10,7 +10,7 @@ export default function MainProfileGadget(props: any) {
     <>
       <div
         style={{
-          ...props.sx,
+          ...props.style,
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
@@ -24,20 +24,20 @@ export default function MainProfileGadget(props: any) {
           />
         ) : (
           <Avatar
-            img={publicCtx.user.avatar}
+            src={publicCtx.user.avatar}
             style={{ width: "15vh", height: "15vh" }}
           />
         )}
 
         <div style={{ direction: "ltr" }}>
-          <Label size="caption" sx={{ mt: 1 }}>
+          <Label size="caption" style={{ mt: 1 }}>
             @{publicCtx.user.username}
           </Label>
         </div>
 
         <Rating
           size="small"
-          sx={{ mt: 1, mb: 1 }}
+          style={{ mt: 1, mb: 1 }}
           value={publicCtx.user.score}
         />
       </div>

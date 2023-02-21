@@ -31,7 +31,7 @@ export default function SettingButton() {
         fullscreen={publicCtx.device.isMobile}
       >
         <GridHeader
-          sx={{
+          style={{
             pl: publicCtx.device.isMobile ? 1 : 15,
             pr: publicCtx.device.isMobile ? 1 : 15,
             mt: 5,

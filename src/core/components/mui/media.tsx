@@ -9,6 +9,7 @@ export default function Media(props: any) {
       height="auto"
       image={image}
       alt={alt}
+      sx={{ ...props.style }}
       {...other}
     />
   );

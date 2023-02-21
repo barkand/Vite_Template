@@ -9,7 +9,7 @@ export const enum Type {
 export default function ButtonMUI(props: any) {
   const { title, ...other } = props;
   return (
-    <Button variant={props.type} {...other}>
+    <Button variant={props.type} sx={{ ...props.style }} {...other}>
       {title}
     </Button>
   );

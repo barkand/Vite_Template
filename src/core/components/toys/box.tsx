@@ -10,7 +10,7 @@ export default function Box(props: any) {
   return (
     <div
       style={{
-        ...props.sx,
+        ...props.style,
         display: "flex",
         flexDirection: "column",
         borderRadius: "40px 40px 0px 0px",

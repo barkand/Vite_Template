@@ -58,7 +58,7 @@ export default function UsernameEditor(props: any) {
         @{" "}
         <Textbox
           autoComplete="off"
-          sx={{ width: "16ch" }}
+          style={{ width: "16ch" }}
           onChange={handleChange}
         />
       </div>

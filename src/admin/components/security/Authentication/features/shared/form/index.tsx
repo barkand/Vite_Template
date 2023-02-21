@@ -64,7 +64,7 @@ export default function Form({ openForm, setOpenForm, type, mutate }: any) {
           fullscreen={publicCtx.device.isMobile}
         >
           <GridHeader
-            sx={{ mt: 1, mb: 5, minHeight: 200, width: 350 }}
+            style={{ mt: 1, mb: 5, minHeight: 200, width: 350 }}
             rowSpacing={4}
             textAlign="center"
           >
@@ -92,7 +92,7 @@ export default function Form({ openForm, setOpenForm, type, mutate }: any) {
                     title={t(`change-${import.meta.env.VITE_AUTH_TYPE}`)}
                     variant="contained"
                     onClick={() => setSended(false)}
-                    sx={{ mr: 5 }}
+                    style={{ mr: 5 }}
                   />
                   <Button
                     title={t("login")}

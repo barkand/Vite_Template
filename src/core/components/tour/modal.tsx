@@ -38,22 +38,22 @@ export default function WelcomeForm() {
               <Label size="h6">
                 {t("welcome-tour")} {t("site-name", { ns: "public" })}
               </Label>
-              <Divider sx={{ mb: 2, mt: 4 }} />
+              <Divider style={{ mb: 2, mt: 4 }} />
 
               <Button
                 onClick={startTour}
                 variant="outlined"
                 title={t("open-tour")}
-                sx={{ ml: 2, mr: 2 }}
+                style={{ ml: 2, mr: 2 }}
               />
               <Button
                 onClick={closeForm}
                 variant="outlined"
                 title={t("close")}
-                sx={{ ml: 2, mr: 2 }}
+                style={{ ml: 2, mr: 2 }}
               />
 
-              <Divider sx={{ mb: 2, mt: 4 }} />
+              <Divider style={{ mb: 2, mt: 4 }} />
               <Checkbox
                 label={t("Do-not-show-tour")}
                 handleChange={doNotShowForm}

@@ -15,7 +15,7 @@ export default function BadgeButton(props: any) {
   return (
     <>
       <IconButton
-        sx={{ ...props.sx, width: "40px", height: "40px" }}
+        sx={{ ...props.style, width: "40px", height: "40px" }}
         aria-label={props.label}
         onClick={handleOpen}
       >

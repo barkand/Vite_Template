@@ -12,7 +12,7 @@ export default function Title() {
     <Link to={RoutesTypeEnum.Home}>
       <Label
         size="subtitle1"
-        sx={{
+        style={{
           fontFamily: "Alegreya,serif",
           fontSize: publicCtx.device.isMobile ? 25 : 30,
           color: publicCtx.theme.background.isDark ? "white" : "black",

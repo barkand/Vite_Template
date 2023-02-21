@@ -31,7 +31,7 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
 }));
 
 export default function BadgeAvatars(props: any) {
-  const { alt, img, withStatus, ...other } = props;
+  const { alt, src, withStatus, ...other } = props;
   return (
     <>
       <Stack direction="row" spacing={2} justifyContent="center">
@@ -41,20 +41,20 @@ export default function BadgeAvatars(props: any) {
             variant="dot"
             anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
           >
-            {img !== "" ? (
+            {src !== "" ? (
               <img
                 crossOrigin="anonymous"
                 alt={alt}
-                src={img}
+                src={src}
                 style={{ width: "5vh", height: "5vh", borderRadius: 25 }}
                 {...other}
               />
             ) : (
-              <Avatar alt={alt} src={img} {...other} />
+              <Avatar alt={alt} src={src} sx={{ ...props.style }} {...other} />
             )}
           </StyledBadge>
         ) : (
-          <Avatar alt={alt} src={img} {...other} />
+          <Avatar alt={alt} src={src} sx={{ ...props.style }} {...other} />
         )}
       </Stack>
     </>

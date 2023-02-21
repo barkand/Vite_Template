@@ -31,7 +31,7 @@ export default function MiniProfileGadget({ onClose }: { onClose: any }) {
               }}
             >
               <Avatar
-                img={publicCtx.user.avatar}
+                src={publicCtx.user.avatar}
                 withStatus={publicCtx.user.connected}
               />
 
@@ -42,7 +42,7 @@ export default function MiniProfileGadget({ onClose }: { onClose: any }) {
                   </Label>
                   <Rating
                     size="small"
-                    sx={{ paddingTop: "5px" }}
+                    style={{ paddingTop: "5px" }}
                     value={publicCtx.user.score}
                   />
                 </>
@@ -50,7 +50,7 @@ export default function MiniProfileGadget({ onClose }: { onClose: any }) {
             </div>
             <Label
               size="caption"
-              sx={{ paddingTop: "10px", paddingBottom: "25px" }}
+              style={{ paddingTop: "10px", paddingBottom: "25px" }}
             >
               {shortUser()}
             </Label>

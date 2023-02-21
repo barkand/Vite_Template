@@ -10,7 +10,7 @@ export default function FooterComponent({ children }: { children: any }) {
     <footer>
       <Paper
         shadow={1}
-        sx={{
+        style={{
           textAlign: "center",
           bottom: 0,
           left: 0,

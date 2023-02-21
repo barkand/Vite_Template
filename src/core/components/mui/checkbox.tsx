@@ -1,11 +1,12 @@
 import { FormControlLabel, Checkbox } from "@mui/material";
 
-export default function CheckboxMUI({ label, handleChange }: any) {
+export default function CheckboxMUI(props: any) {
+  const { label, handleChange }: any = props;
   return (
     <>
       <FormControlLabel
         control={<Checkbox onChange={handleChange} />}
-        sx={{ ml: 0, mr: 0 }}
+        sx={{ ...props.style, ml: 0, mr: 0 }}
         label={label}
       />
     </>

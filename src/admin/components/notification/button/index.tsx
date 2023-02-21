@@ -52,7 +52,7 @@ export default function NotificationButton(props: any) {
 
   return (
     <>
-      <IconButton onClick={onClick} sx={props.sx}>
+      <IconButton onClick={onClick} style={props.style}>
         {notify ? (
           <Tip title={t("un-notify")}>
             <NotificationsActiveIcon />

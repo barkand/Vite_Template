@@ -34,7 +34,7 @@ export default function Form() {
     <>
       <IconButton
         onClick={handleClickOpen}
-        sx={{ position: "absolute", right: "0px" }}
+        style={{ position: "absolute", right: "0px" }}
       >
         <MoreHorizIcon />
       </IconButton>
@@ -45,9 +45,9 @@ export default function Form() {
         setOpen={setOpen}
         fullscreen={publicCtx.device.isMobile}
       >
-        <GridHeader sx={{ mt: 1, mb: 5, p: 3 }} rowSpacing={4}>
+        <GridHeader style={{ mt: 1, mb: 5, p: 3 }} rowSpacing={4}>
           <GridItem xs={4}>{t("avatar")}</GridItem>
-          <GridItem xs={7} sx={{ pl: 2 }}>
+          <GridItem xs={7} style={{ pl: 2 }}>
             <AvatarEditor
               text={t("selectPhoto")}
               uploadAvatar={uploadAvatar}

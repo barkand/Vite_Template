@@ -9,13 +9,13 @@ export default function Card({ children, title, height, ...other }: any) {
 
   return (
     <div
-      {...other}
       style={{
         padding: "5px",
         margin: "5px",
         borderRadius: "25px",
         background: Background[publicCtx.theme.background.name].tertiary,
       }}
+      {...other}
     >
       <div
         style={{
@@ -24,7 +24,7 @@ export default function Card({ children, title, height, ...other }: any) {
       >
         {children}
       </div>
-      <Label size="p" sx={{ pb: 3 }}>
+      <Label size="p" style={{ pb: 3 }}>
         {title}
       </Label>
     </div>

@@ -5,7 +5,7 @@ export default function IconButtonMUI(props: any) {
 
   return (
     <IconButton
-      sx={{ ...props.sx, width: "40px", height: "40px" }}
+      sx={{ width: "40px", height: "40px", ...props.style }}
       aria-label={props.label}
       onClick={onClick}
       {...other}
