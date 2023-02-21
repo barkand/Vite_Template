@@ -32,6 +32,7 @@
   "notify-permission-denied": "Permission confirmation is required for notification",
   "welcome-tour": "Welcome to",
   "open-tour": "Open Tour",
+  "Do-not-show-tour": "Do not show the help again",
   "mail": "Email",
   "mobile": "Mobile",
   "send-code": "Send Code",
