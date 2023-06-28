@@ -1,9 +1,9 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 
-import { PublicContext } from "../../../../../../../core/context";
-import { IconButton, Tip } from "../../../../../../../core/components";
-import { LockIcon, LockOpenIcon } from "../../../../../../../core/icon";
+import { PublicContext } from "@/core/context";
+import { IconButton, Tip } from "@/core/components";
+import { LockIcon, LockOpenIcon } from "@/core/icon";
 
 import useUser from "../../../hook/use-user";
 import { Form, Logout } from "../../shared";

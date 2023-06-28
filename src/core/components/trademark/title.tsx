@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import { PublicContext } from "../../context";
-import { RoutesTypeEnum } from "../../constant";
+import { PublicContext } from "@/core/context";
+import { RoutesTypeEnum } from "@/core/constant";
 import { Label } from "..";
 
 export default function Title() {

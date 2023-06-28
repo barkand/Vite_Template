@@ -1,7 +1,7 @@
 import { Divider, IconButton, Drawer } from "@mui/material";
 import { styled } from "@mui/material/styles";
 
-import { ChevronLeftIcon, MenuIcon } from "../../../core/icon";
+import { ChevronLeftIcon, MenuIcon } from "@/core/icon";
 
 const DrawerHeader = styled("div")(({ theme }) => ({
   display: "flex",

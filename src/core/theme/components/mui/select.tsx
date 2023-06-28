@@ -1,9 +1,9 @@
 import React from "react";
 import { Select, MenuItem, FormControl } from "@mui/material";
 
-import { PublicContext } from "../../../context";
-import { Colors } from "../../../theme";
-import { CircleIcon } from "../../../icon";
+import { PublicContext } from "@/core/context";
+import { Colors } from "@/core/theme";
+import { CircleIcon } from "@/core/icon";
 
 export default function ColorSelect() {
   const { publicCtx, setPublicCtx }: any = React.useContext(PublicContext);

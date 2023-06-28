@@ -1,4 +1,4 @@
-import { Colors as c } from "../components";
+import { Colors as c } from "@/core/theme/components";
 
 const Colors: any = {
   red: {

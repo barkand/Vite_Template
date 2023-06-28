@@ -1,9 +1,9 @@
 import React from "react";
 
-import * as Enums from "../../constant";
-import { PublicContext } from "../../context";
-import { IconButton } from "../../components";
-import { MoonIcon, SunIcon } from "../../icon";
+import * as Enums from "@/core/constant";
+import { PublicContext } from "@/core/context";
+import { IconButton } from "@/core/components";
+import { MoonIcon, SunIcon } from "@/core/icon";
 import useTheme from "../hook/use-theme";
 
 export default function DarkMode() {

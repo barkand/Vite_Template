@@ -1,7 +1,7 @@
 import React from "react";
 
-import { PublicContext } from "../../../core/context";
-import { AlertBar } from "../../../core/components";
+import { PublicContext } from "@/core/context";
+import { AlertBar } from "@/core/components";
 
 export default function AlertBarComponent() {
   const { publicCtx, setPublicCtx }: any = React.useContext(PublicContext);

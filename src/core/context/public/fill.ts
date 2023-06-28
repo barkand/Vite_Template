@@ -1,4 +1,4 @@
-import { DeviceTypeEnum, StatusTypeEnum } from "../../constant";
+import { DeviceTypeEnum, StatusTypeEnum } from "@/core/constant";
 import { DefaultCulture, DefaultTheme, DefaultUser } from "../default";
 
 let _device =

@@ -1,10 +1,10 @@
 import React from "react";
 
-import { PublicContext } from "../../../../core/context";
-import { RoutesTypeEnum } from "../../../../core/constant";
-import { BadgeButton } from "../../../../core/components";
-import { PostAuthApi } from "../../../../core/libs";
-import { NotificationsIcon } from "../../../../core/icon";
+import { PublicContext } from "@/core/context";
+import { RoutesTypeEnum } from "@/core/constant";
+import { BadgeButton } from "@/core/components";
+import { PostAuthApi } from "@/core/libs";
+import { NotificationsIcon } from "@/core/icon";
 
 export default function Notification(props: any) {
   const [loaded, setLoaded] = React.useState<boolean>(false);

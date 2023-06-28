@@ -1,7 +1,7 @@
 import React from "react";
 
-import { PublicContext } from "../../context";
-import { Background } from "../../theme";
+import { PublicContext } from "@/core/context";
+import { Background } from "@/core/theme";
 import { Label } from "..";
 
 export default function Card({ children, title, height, ...other }: any) {

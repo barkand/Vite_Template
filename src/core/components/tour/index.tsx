@@ -5,7 +5,7 @@ import WelcomeForm from "./modal";
 import { default as stepsEn } from "./steps/en";
 import { default as stepsFa } from "./steps/fa";
 
-import { PublicContext } from "../../../core/context";
+import { PublicContext } from "@/core/context";
 
 function Provider(props: any) {
   const { children } = props;

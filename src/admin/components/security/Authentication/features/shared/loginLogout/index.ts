@@ -1,6 +1,6 @@
-import { DefaultUser } from "../../../../../../../core/context/default";
-import { StatusTypeEnum } from "../../../../../../../core/constant";
-import { PostAuthApi } from "../../../../../../../core/libs";
+import { DefaultUser } from "@/core/context/default";
+import { StatusTypeEnum } from "@/core/constant";
+import { PostAuthApi } from "@/core/libs";
 
 const SendCode = async (user_id: string) => {
   let _result: any = await PostAuthApi(

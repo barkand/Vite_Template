@@ -1,7 +1,7 @@
 import React from "react";
 import { Tabs, Tab, Box } from "@mui/material";
 
-import { PublicContext } from "../../context";
+import { PublicContext } from "@/core/context";
 
 interface TabsHeaderProps {
   children: React.ReactNode;

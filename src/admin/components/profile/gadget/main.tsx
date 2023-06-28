@@ -1,7 +1,7 @@
 import React from "react";
 
-import { PublicContext } from "../../../../core/context";
-import { Avatar, Label, Rating } from "../../../../core/components";
+import { PublicContext } from "@/core/context";
+import { Avatar, Label, Rating } from "@/core/components";
 
 export default function MainProfileGadget(props: any) {
   const { publicCtx }: { publicCtx: any } = React.useContext(PublicContext);

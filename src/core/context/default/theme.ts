@@ -1,4 +1,4 @@
-import { ThemeTypeEnum } from "../../constant";
+import { ThemeTypeEnum } from "@/core/constant";
 
 const theme: any = {
   dark: {

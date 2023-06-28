@@ -11,8 +11,8 @@ import {
 } from "@mui/material";
 import { TransitionProps } from "@mui/material/transitions";
 
-import { PublicContext } from "../../context";
-import { CloseIcon } from "../../../core/icon";
+import { PublicContext } from "@/core/context";
+import { CloseIcon } from "@/core/icon";
 
 const Transition = React.forwardRef(function Transition(
   props: TransitionProps & {

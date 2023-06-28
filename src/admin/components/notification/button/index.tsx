@@ -1,14 +1,11 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 
-import { PublicContext } from "../../../../core/context";
-import { IconButton, Tip } from "../../../../core/components";
-import { StatusTypeEnum } from "../../../../core/constant";
-import { PostAuthApi } from "../../../../core/libs";
-import {
-  NotificationsActiveIcon,
-  NotificationsNoneIcon,
-} from "../../../../core/icon";
+import { PublicContext } from "@/core/context";
+import { IconButton, Tip } from "@/core/components";
+import { StatusTypeEnum } from "@/core/constant";
+import { PostAuthApi } from "@/core/libs";
+import { NotificationsActiveIcon, NotificationsNoneIcon } from "@/core/icon";
 
 export default function NotificationButton(props: any) {
   const { id, message, link, notified }: any = props;

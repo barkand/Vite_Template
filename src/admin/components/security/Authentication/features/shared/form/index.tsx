@@ -2,14 +2,14 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import Countdown from "react-countdown";
 
-import { PublicContext } from "../../../../../../../core/context";
+import { PublicContext } from "@/core/context";
 import {
   Dialog,
   GridHeader,
   GridItem,
   Textbox,
   Button,
-} from "../../../../../../../core/components";
+} from "@/core/components";
 
 import { Login, SendCode } from "../loginLogout";
 

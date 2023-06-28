@@ -13,9 +13,9 @@ import {
 } from "@mui/material";
 import { useTranslation } from "react-i18next";
 
-import { PublicContext } from "../../context";
-import { not, intersection, union } from "../../libs/base/array";
-import { StatusTypeEnum } from "../../../core/constant";
+import { PublicContext } from "@/core/context";
+import { not, intersection, union } from "@/core/libs/base/array";
+import { StatusTypeEnum } from "@/core/../core/constant";
 
 export default function TransferList({
   LeftList,

@@ -7,7 +7,7 @@ import {
 } from "@mui/material";
 import { styled } from "@mui/material/styles";
 
-import { PublicContext } from "../../context";
+import { PublicContext } from "@/core/context";
 
 export default function Tip(props: any) {
   const { title, children } = props;

@@ -1,7 +1,7 @@
 import React from "react";
 
-import { PublicContext } from "../../../core/context";
-import { Paper } from "../../../core/components";
+import { PublicContext } from "@/core/context";
+import { Paper } from "@/core/components";
 
 export default function FooterComponent({ children }: { children: any }) {
   const { publicCtx } = React.useContext(PublicContext);

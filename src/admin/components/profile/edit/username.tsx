@@ -1,10 +1,10 @@
 import React from "react";
 import _debounce from "lodash/debounce";
 
-import { EditTypeEnum } from "../../../../core/constant";
-import { PublicContext } from "../../../../core/context";
-import { Textbox } from "../../../../core/components";
-import { PostAuthApi } from "../../../../core/libs";
+import { EditTypeEnum } from "@/core/constant";
+import { PublicContext } from "@/core/context";
+import { Textbox } from "@/core/components";
+import { PostAuthApi } from "@/core/libs";
 
 export default function UsernameEditor(props: any) {
   const { setEditUsername } = props;

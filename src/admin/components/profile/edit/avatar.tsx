@@ -1,10 +1,10 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 
-import { EditTypeEnum, StatusTypeEnum } from "../../../../core/constant";
-import { PublicContext } from "../../../../core/context";
-import { ButtonLoading } from "../../../../core/components";
-import { importPhoto, UploadApi } from "../../../../core/libs";
+import { EditTypeEnum, StatusTypeEnum } from "@/core/constant";
+import { PublicContext } from "@/core/context";
+import { ButtonLoading } from "@/core/components";
+import { importPhoto, UploadApi } from "@/core/libs";
 
 export default function AvatarEditor(props: any) {
   const { t } = useTranslation(["admin"]);

@@ -1,4 +1,4 @@
-import { AuthTypeEnum } from "../../../../../core/constant";
+import { AuthTypeEnum } from "@/core/constant";
 
 import { WalletButton } from "../features/wallet";
 import { MailButton } from "../features/mail";

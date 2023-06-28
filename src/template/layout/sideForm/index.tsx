@@ -1,4 +1,4 @@
-import { SideForm } from "../../../core/components";
+import { SideForm } from "@/core/components";
 
 export default function SideFormComponent(props: any) {
   const { children, ...other } = props;

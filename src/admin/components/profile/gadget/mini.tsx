@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import { RoutesTypeEnum } from "../../../../core/constant";
-import { PublicContext } from "../../../../core/context";
-import { Avatar, Label, Divider, Rating } from "../../../../core/components";
-import { shortUser } from "../../../../admin/components/security/Authentication";
+import { RoutesTypeEnum } from "@/core/constant";
+import { PublicContext } from "@/core/context";
+import { Avatar, Label, Divider, Rating } from "@/core/components";
+import { shortUser } from "@/admin/components/security/Authentication";
 
 export default function MiniProfileGadget({ onClose }: { onClose: any }) {
   const { publicCtx }: { publicCtx: any } = React.useContext(PublicContext);

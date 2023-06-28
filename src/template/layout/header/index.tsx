@@ -1,4 +1,4 @@
-import { AppToolbar } from "../../../core/components";
+import { AppToolbar } from "@/core/components";
 
 export default function HeaderComponent({ children }: { children: any }) {
   return (

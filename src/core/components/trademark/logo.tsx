@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 import logo from "/assets/media/logo/logo.png";
-import { RoutesTypeEnum } from "../../constant";
+import { RoutesTypeEnum } from "@/core/constant";
 
 export default function Logo() {
   return (

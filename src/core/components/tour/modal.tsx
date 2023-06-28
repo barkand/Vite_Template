@@ -2,9 +2,9 @@ import React from "react";
 import { useTour } from "@reactour/tour";
 import { useTranslation } from "react-i18next";
 
-import { Modal, Button, Label, Divider, Checkbox } from "../../components";
+import { Modal, Button, Label, Divider, Checkbox } from "@/core/components";
 
-import { PublicContext } from "../../context";
+import { PublicContext } from "@/core/context";
 
 export default function WelcomeForm() {
   const { t } = useTranslation(["admin", "public"]);

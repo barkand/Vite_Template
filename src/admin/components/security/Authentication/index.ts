@@ -1,4 +1,4 @@
-import { AuthTypeEnum } from "../../../../core/constant";
+import { AuthTypeEnum } from "@/core/constant";
 
 import { shortUser as mailShortUser } from "./features/mail";
 import { shortUser as walletShortUser } from "./features/wallet";

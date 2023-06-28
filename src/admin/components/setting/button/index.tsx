@@ -1,16 +1,16 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 
-import { PublicContext } from "../../../../core/context";
-import { ColorSelect } from "../../../../core/theme";
-import { LanguageButton } from "../../../../core/locales";
+import { PublicContext } from "@/core/context";
+import { ColorSelect } from "@/core/theme";
+import { LanguageButton } from "@/core/locales";
 import {
   Dialog,
   IconButton,
   GridHeader,
   GridItem,
-} from "../../../../core/components";
-import { SettingsIcon } from "../../../../core/icon";
+} from "@/core/components";
+import { SettingsIcon } from "@/core/icon";
 
 export default function SettingButton() {
   const { publicCtx }: { publicCtx: any } = React.useContext(PublicContext);

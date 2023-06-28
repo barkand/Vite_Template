@@ -1,9 +1,9 @@
 import React from "react";
 
-import { AlertBar } from "../../components/notifications";
+import { AlertBar } from "@/template/components/notifications";
 
-import { PublicContext } from "../../../core/context";
-import { Progress, ScrollTopButton } from "../../../core/components";
+import { PublicContext } from "@/core/context";
+import { Progress, ScrollTopButton } from "@/core/components";
 
 export default function MainComponent({ children }: { children: any }) {
   const { publicCtx } = React.useContext(PublicContext);

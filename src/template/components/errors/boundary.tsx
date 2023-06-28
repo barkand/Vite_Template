@@ -1,7 +1,7 @@
 import { Component, ErrorInfo, ReactNode } from "react";
 
-import { default as ServerErrorPage } from "../../pages/errors/500";
-import { logger } from "../../../core/libs";
+import { default as ServerErrorPage } from "@/template/pages/errors/500";
+import { logger } from "@/core/libs";
 
 interface Props {
   children?: ReactNode;

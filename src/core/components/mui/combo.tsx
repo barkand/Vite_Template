@@ -8,7 +8,7 @@ import {
   ListItemText,
 } from "@mui/material";
 
-import { PublicContext } from "../../context";
+import { PublicContext } from "@/core/context";
 
 export default function Combo(props: any) {
   const { selected, onChange, items, culture, direction, ...other } = props;

@@ -2,14 +2,14 @@ import React from "react";
 import { Box, SpeedDial, SpeedDialAction } from "@mui/material";
 import { styled } from "@mui/material/styles";
 
-import { PublicContext } from "../../context";
+import { PublicContext } from "@/core/context";
 import {
   ShareIcon,
   LinkedInIcon,
   FacebookIcon,
   TwitterIcon,
   MailIcon,
-} from "../../icon";
+} from "@/core/icon";
 
 const withLink = (to: any, children: any) => (
   <a

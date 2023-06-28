@@ -1,7 +1,7 @@
 import React from "react";
 
-import { PublicContext } from "../../../core/context";
-import { Box } from "../../../core/components";
+import { PublicContext } from "@/core/context";
+import { Box } from "@/core/components";
 
 import { Authorization } from "../security";
 import HeaderProfile from "./header";

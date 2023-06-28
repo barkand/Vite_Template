@@ -1,21 +1,21 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 
-import { EditTypeEnum } from "../../../../core/constant";
-import { PublicContext } from "../../../../core/context";
+import { EditTypeEnum } from "@/core/constant";
+import { PublicContext } from "@/core/context";
 import {
   Dialog,
   IconButton,
   GridHeader,
   GridItem,
   Tip,
-} from "../../../../core/components";
+} from "@/core/components";
 import {
   MoreHorizIcon,
   CheckCircleIcon,
   CancelIcon,
   EmptyCircleIcon,
-} from "../../../../core/icon";
+} from "@/core/icon";
 
 import AvatarEditor from "./avatar";
 import UsernameEditor from "./username";
