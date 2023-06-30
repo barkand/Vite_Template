@@ -1,7 +1,7 @@
 import Web3 from "web3";
 import WalletConnectProvider from "@walletconnect/web3-provider";
 
-var web3Provider: any = null;
+let web3Provider: any = null;
 
 const GetLibrary = async () => {
   if (localStorage.getItem("walletType") === "app") {

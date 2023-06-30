@@ -13,7 +13,9 @@ npm i --save react-router-dom ##dotenv
 - Web3: npm i web3 @walletconnect/web3-provider @openzeppelin/contracts
 - Web3 Err: npm i @esbuild-plugins/node-globals-polyfill @esbuild-plugins/node-modules-polyfill
 - PWA: npm i -D vite-plugin-pwa
-- THEME: npm i @mui/material @mui/icons-material @emotion/react @emotion/styled
+- THEME: npm i @mui/material @mui/lab @mui/icons-material
+-        npm i @mantine/core @mantine/hooks
+-        npm i @emotion/react @emotion/styled
 - Lan: npm i i18next react-i18next i18next-browser-languagedetector
 - Image: npm i react-image-file-resizer
 - Effect: npm i --save aos@next && npm i -D @types/aos
