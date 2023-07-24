@@ -5,7 +5,7 @@ import App from "./App";
 import { TiltEffect } from "@/core/components";
 TiltEffect.init();
 
-ReactDOM.createRoot(document.getElementById("root")!).render(
+ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
     <App />
   </React.StrictMode>
