@@ -4,7 +4,7 @@
 
 #### Demo:
 
-> [Footballiga App](app.footballiga.com)
+> [Footballiga App](https://app.footballiga.com)
 
 ## Frontend:
 
